@@ -1,0 +1,27 @@
+:root {
+  /* THEMES */
+  --theme-primary-color: rgba(225, 246, 62);
+  --font-color: #fff;
+
+  /* BUTTONS */
+  --button-background: rgba(0, 0, 0, 0.668);
+  --button-color: #fff;
+  /* Hover */
+  --button-hover-background: black;
+  --button-hover-color: rgb(225, 246, 62);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--font-color);
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h1 {
+  color: var(--theme-primary-color);
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}

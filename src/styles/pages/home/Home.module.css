@@ -1,0 +1,25 @@
+#home {
+  position: relative;
+  height: 100vh;
+}
+#home_background {
+  background-image: url("/bg-burger.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(35%);
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+}
+.home_content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 3rem;
+  height: 100%;
+}

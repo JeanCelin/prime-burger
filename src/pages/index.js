@@ -1,27 +1,19 @@
 import Button from "@/components/Button";
-import Link from "next/link";
+import styles from "@/styles/pages/home/Home.module.css";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center h-screen border border-red-50 gap-4 ">
-      <div style={background}>teste</div>
-      <h1 className="text-[rgb(255,255,0)] text-4xl">Prime Burger</h1>
-      <p>
-        Located in the nearest shopping mall. We will be happy to serve you!
-      </p>
-      <Button link={<Link href="/menu">See Menu</Link>}></Button>
-    </main>
+    <>
+      <main id={styles.home}>
+        <div id={styles.home_background}></div>
+        <div className={styles.home_content}>
+          <h1>Prime Burger</h1>
+          <p>
+            Located in the nearest shopping mall. We will be happy to serve you!
+          </p>
+          <Button address="/menu" label="See menu" />
+        </div>
+      </main>
+    </>
   );
 }
-const background = {
-  top: "0",
-  left: "0",
-  width: "100%",
-  height: "100%",
-  position: "absolute",
-  zIndex: "-1",
-  backgroundImage: "url('/bg-burger.jpeg')",
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-  filter: "brightness(30%)",
-};
