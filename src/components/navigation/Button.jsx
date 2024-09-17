@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import styles from "@/styles/components/Button.module.css";
+import styles from "@/styles/components/utils/Button.module.css";
 
 export default function Button({ address, label, acTarget }) {
   let activeBlank = "";

@@ -1,4 +1,4 @@
-import Button from "@/components/Button";
+import Button from "@/components/navigation/Button";
 import styles from "@/styles/pages/home/Home.module.css";
 
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
       <main id={styles.home}>
         <div id={styles.home_background}></div>
         <div className={styles.home_content}>
-          <h1>Prime Burger</h1>
+          <h1>PRIME BURGER</h1>
           <p>
             Located in the nearest shopping mall. We will be happy to serve you!
           </p>
