@@ -6,11 +6,11 @@ export default function App({ Component, pageProps }) {
     <>
       <NavBar
         itens={[
-          { label: "Home", address: "https://fonts.google.com/" },
-          { label: "teste2", address: "./" },
-          { label: "teste3", address: "./" },
-          { label: "teste4", address: "./" },
-          { label: "teste5", address: "./" },
+          { label: "Home", address: "/" },
+          { label: "Menu", address: "/menu" },
+          { label: "teste3", address: "/" },
+          { label: "teste4", address: "/" },
+          { label: "teste5", address: "/" },
         ]}
         logoConfig={[
           {
