@@ -40,3 +40,7 @@ h2 {
   text-transform: uppercase;
   font-weight: bold;
 }
+h3 {
+  color: var(--theme-primary-color);
+  text-transform: uppercase;
+}

@@ -6,38 +6,50 @@ export default function Menu() {
     <div id={styles.menu}>
       <div className={styles.menu_content}>
         <h1>Menu</h1>
-        <section className={styles.menu_burgersCard}>
-          <div>
-            <BurgersOptions
-              imageConfig={[
-                {
-                  src: "/burgers/bacon-burger.png",
-                  width: 96,
-                  heigth: 96,
-                  alt: "A bacon burger",
-                },
-                {
-                  src: "/burgers/bacon-burger.png",
-                  width: 96,
-                  heigth: 96,
-                  alt: "A bacon burger",
-                },
-              ]}
-              objIngredients={[
-                {
-                  burgerName: "Complete",
-                  ingredients: [
-                    "Pão integral",
-                    "Alface",
-                    "Carne de Porco",
-                    "Tomate",
-                    "Bacon",
-                  ],
-                },
-              ]}
-            />
-          </div>
-        </section>
+        <BurgersOptions
+          burgerCard={[
+            {
+              title: "Complete",
+              price: "R$ 38,99",
+              src: "/burgers/chicken-burger.png",
+              width: 128,
+              height: 128,
+              alt: "A bacon burger",
+              description:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro   impedit, quo cumque qui error nisi unde, reprehenderit in corporis architecto necessitatibus, veritatis dolorem esse quisquam quos. Veritatis, aliquid quos? Est!",
+            },
+            {
+              title: "Complete",
+              price: "R$ 38,99",
+              src: "/burgers/chicken-burger.png",
+              width: 128,
+              height: 128,
+              alt: "A bacon burger",
+              description:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro   impedit, quo cumque qui error nisi unde, reprehenderit in corporis architecto necessitatibus, veritatis dolorem esse quisquam quos. Veritatis, aliquid quos? Est!",
+            },
+            {
+              title: "Complete",
+              price: "R$ 38,99",
+              src: "/burgers/chicken-burger.png",
+              width: 128,
+              height: 128,
+              alt: "A bacon burger",
+              description:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro   impedit, quo cumque qui error nisi unde, reprehenderit in corporis architecto necessitatibus, veritatis dolorem esse quisquam quos. Veritatis, aliquid quos? Est!",
+            },
+            {
+              title: "Complete",
+              price: "R$ 38,99",
+              src: "/burgers/chicken-burger.png",
+              width: 128,
+              height: 128,
+              alt: "A bacon burger",
+              description:
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro   impedit, quo cumque qui error nisi unde, reprehenderit in corporis architecto necessitatibus, veritatis dolorem esse quisquam quos. Veritatis, aliquid quos? Est!",
+            },
+          ]}
+        />
       </div>
     </div>
   );

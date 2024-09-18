@@ -1,17 +1,62 @@
-#burgersOptions {
+.burgersOptions_card__container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
-  background-color: rgb(22, 22, 22);
-  border-radius: 5px;
-  padding: 2rem;
-  box-shadow: 0 0 10px 2px black;
+  gap: 2rem;
+  margin: 3rem 1rem;
 }
-.burgersOptions_content {
+.burgersOptions_card_description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.burgersOptions_card_descriptionContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1rem;
-  width: 100%;
+  padding: 0.5rem;
+}
+#burgersOptions_card_titlePrice {
+  display: flex;
+  justify-content: space-between;
+}
+.burgersOptions_card_description {
+  max-width: 900px;
+}
+.shop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: 0.5rem;
+}
+.shop button {
+  text-align: center;
+  background: none;
+  width: 30px;
+  height: 30px;
+}
+.shop_display {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 640px) {
+  .burgersOptions_card__container {
+    flex-direction: column-reverse;
+    gap: 0;
+    margin-bottom: 3rem;
+  }
+  .burgersOptions_card_description {
+    flex-direction: column;
+    gap: 0;
+  }
+  .shop {
+    flex-direction: row;
+  }
+  #burgersOptions_card_titlePrice {
+    flex-direction: column;
+    text-align: center;
+  }
 }
