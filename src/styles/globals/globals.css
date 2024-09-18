@@ -4,11 +4,20 @@
   --font-color: #fff;
 
   /* BUTTONS */
+  /* Navbar Buttons   */
   --button-background: rgba(0, 0, 0, 0.668);
   --button-color: #fff;
   /* Hover */
-  --button-hover-background: black;
+  --button-hover-background: #000;
   --button-hover-color: rgb(225, 246, 62);
+
+  /* Button Buy */
+
+  --buttonBuy-background: #000;
+  --buttonBuy-color: rgb(225, 246, 62);
+  /* Hover */
+  --button-hover-background: var(--theme-primary-color);
+  --button-hover-color: #000;
 }
 * {
   margin: 0;
@@ -24,5 +33,10 @@ h1 {
   color: var(--theme-primary-color);
   font-size: 2.25rem;
   line-height: 2.5rem;
+  font-weight: bold;
+}
+h2 {
+  color: var(--theme-primary-color);
+  text-transform: uppercase;
   font-weight: bold;
 }
