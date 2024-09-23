@@ -1,14 +1,35 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
-
 import styles from "@/styles/components/layout/BurgersOptions.module.css";
-import ButtonBuy from "@/components/navigation/ButtonBuy";
 
 export default function BurgersOptions({ burgerCard }) {
-  const [item, setItem] = useState([]);
+  const [displayValues, setDisplayValues] = useState([]);
+
   useEffect(() => {
-    const arrays = burgerCard.map((e, index) => {
-      return (
+    // Inicializa os valores de cada card com 0
+    setDisplayValues(new Array(burgerCard.length).fill(0));
+  }, [burgerCard]);
+
+  const handleIncreaseClick = (index) => {
+    setDisplayValues((prevValues) => {
+      const newValues = [...prevValues];
+      newValues[index] += 1;
+      return newValues;
+    });
+  };
+  const handleDecreaseClick = (index) => {
+    setDisplayValues((prevValues) => {
+      const newValues = [...prevValues];
+      if (newValues[index] > 0) {
+        newValues[index] -= 1;
+      }
+      return newValues;
+    });
+  };
+
+  return (
+    <section id={styles.burgersOptions}>
+      {burgerCard.map((e, index) => (
         <div key={index} className={styles.burgersOptions_card__container}>
           <div className={styles.burgersOptions_card_description}>
             <div className={styles.burgersOptions_card_descriptionContainer}>
@@ -21,21 +42,19 @@ export default function BurgersOptions({ burgerCard }) {
               </p>
             </div>
             <div className={styles.shop}>
-              <button>+</button>
-              <div className={styles.shop_display}>0</div>
-              <button>-</button>
+              <button onClick={() => handleIncreaseClick(index)}>+</button>
+              <div className={styles.shop_display}>{displayValues[index]}</div>
+              <button
+                onClick={() => {
+                  handleDecreaseClick(index);
+                }}>
+                -
+              </button>
             </div>
           </div>
-          <Image
-            src={e.src}
-            width={e.width}
-            height={e.height}
-            alt={e.alt}></Image>
+          <Image src={e.src} width={e.width} height={e.height} alt={e.alt} />
         </div>
-      );
-    });
-    setItem(arrays);
-  }, [burgerCard]);
-
-  return <section id={styles.burgersOptions}>{item}</section>;
+      ))}
+    </section>
+  );
 }
