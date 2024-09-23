@@ -37,7 +37,7 @@ export default function BurgersOptions({ burgerCard }) {
       setBurgerPrice(totalPrice.toFixed(2));
     };
     const saveOrderData = () => {
-      const arrayTest = [];
+      const arrayOrder = [];
       displayValues.forEach((e, index) => {
         if (e > 0) {
           let obj = {
@@ -45,10 +45,10 @@ export default function BurgersOptions({ burgerCard }) {
             preco: burgerCard[index].price,
             qnt: e,
           };
-          arrayTest.push(obj);
+          arrayOrder.push(obj);
         }
       });
-      setOrderData(arrayTest);
+      setOrderData(arrayOrder);
     };
     saveOrderData();
     calcPrice();
