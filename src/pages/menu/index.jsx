@@ -10,7 +10,7 @@ export default function Menu() {
           burgerCard={[
             {
               title: "Complete",
-              price: "R$ 38,99",
+              price: 20.99,
               src: "/burgers/chicken-burger.png",
               width: 128,
               height: 128,
@@ -19,8 +19,8 @@ export default function Menu() {
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro   impedit, quo cumque qui error nisi unde, reprehenderit in corporis architecto necessitatibus, veritatis dolorem esse quisquam quos. Veritatis, aliquid quos? Est!",
             },
             {
-              title: "Complete",
-              price: "R$ 38,99",
+              title: "Chicken",
+              price: 25.9,
               src: "/burgers/chicken-burger.png",
               width: 128,
               height: 128,
@@ -29,18 +29,8 @@ export default function Menu() {
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro   impedit, quo cumque qui error nisi unde, reprehenderit in corporis architecto necessitatibus, veritatis dolorem esse quisquam quos. Veritatis, aliquid quos? Est!",
             },
             {
-              title: "Complete",
-              price: "R$ 38,99",
-              src: "/burgers/chicken-burger.png",
-              width: 128,
-              height: 128,
-              alt: "A bacon burger",
-              description:
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro   impedit, quo cumque qui error nisi unde, reprehenderit in corporis architecto necessitatibus, veritatis dolorem esse quisquam quos. Veritatis, aliquid quos? Est!",
-            },
-            {
-              title: "Complete",
-              price: "R$ 38,99",
+              title: "X-Tudo",
+              price: 19.99,
               src: "/burgers/chicken-burger.png",
               width: 128,
               height: 128,

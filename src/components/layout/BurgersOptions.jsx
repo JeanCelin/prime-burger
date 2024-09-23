@@ -4,6 +4,8 @@ import styles from "@/styles/components/layout/BurgersOptions.module.css";
 
 export default function BurgersOptions({ burgerCard }) {
   const [displayValues, setDisplayValues] = useState([]);
+  const [burgerPrice, setBurgerPrice] = useState([]);
+  const [orderData, setOrderData] = useState([]);
 
   useEffect(() => {
     // Inicializa os valores de cada card com 0
@@ -27,6 +29,34 @@ export default function BurgersOptions({ burgerCard }) {
     });
   };
 
+  useEffect(() => {
+    const calcPrice = () => {
+      const totalPrice = burgerCard.reduce((acc, burger, index) => {
+        return acc + displayValues[index] * burger.price;
+      }, 0);
+      setBurgerPrice(totalPrice.toFixed(2));
+    };
+    const saveOrderData = () => {
+      const arrayTest = [];
+      displayValues.forEach((e, index) => {
+        if (e > 0) {
+          let obj = {
+            nome: burgerCard[index].title,
+            preco: burgerCard[index].price,
+            qnt: e,
+          };
+          arrayTest.push(obj);
+        }
+      });
+      setOrderData(arrayTest);
+    };
+    saveOrderData();
+    calcPrice();
+  }, [displayValues]);
+  useEffect(() => {
+    console.log(orderData);
+  }, [orderData]);
+
   return (
     <section id={styles.burgersOptions}>
       {burgerCard.map((e, index) => (
@@ -35,7 +65,7 @@ export default function BurgersOptions({ burgerCard }) {
             <div className={styles.burgersOptions_card_descriptionContainer}>
               <div id={styles.burgersOptions_card_titlePrice}>
                 <h3>{e.title}</h3>
-                <h3>{e.price}</h3>
+                <h3>{`R$ ${e.price.toFixed(2)}`}</h3>
               </div>
               <p className={styles.burgersOptions_card_description}>
                 {e.description}
@@ -55,6 +85,7 @@ export default function BurgersOptions({ burgerCard }) {
           <Image src={e.src} width={e.width} height={e.height} alt={e.alt} />
         </div>
       ))}
+      <h1>Valor a pagar: R${burgerPrice}</h1>
     </section>
   );
 }

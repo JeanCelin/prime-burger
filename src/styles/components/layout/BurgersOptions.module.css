@@ -53,7 +53,7 @@
     gap: 0;
   }
   .shop {
-    flex-direction: row;
+    flex-direction: row-reverse;
   }
   #burgersOptions_card_titlePrice {
     flex-direction: column;
