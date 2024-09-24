@@ -1,27 +1,27 @@
-.burgersOptions_card__container {
+.drinksOptions_card__container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
   margin: 3rem 1rem;
 }
-.burgersOptions_card_description {
+.drinksOptions_card_description {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
-.burgersOptions_card_descriptionContainer {
+.drinksOptions_card_descriptionContainer {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   padding: 0.5rem;
 }
-#burgersOptions_card_titlePrice {
+#drinksOptions_card_titlePrice {
   display: flex;
   justify-content: space-between;
 }
-.burgersOptions_card_description {
+.drinksOptions_card_description {
   max-width: 900px;
 }
 .shop {
@@ -51,19 +51,19 @@
 }
 
 @media (max-width: 640px) {
-  .burgersOptions_card__container {
+  .drinksOptions_card__container {
     flex-direction: column-reverse;
     gap: 0;
     margin-bottom: 3rem;
   }
-  .burgersOptions_card_description {
+  .drinksOptions_card_description {
     flex-direction: column;
     gap: 0;
   }
   .shop {
     flex-direction: row-reverse;
   }
-  #burgersOptions_card_titlePrice {
+  #drinksOptions_card_titlePrice {
     flex-direction: column;
     text-align: center;
   }

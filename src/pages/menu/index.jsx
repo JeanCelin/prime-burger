@@ -1,11 +1,13 @@
 import BurgersOptions from "@/components/layout/BurgersOptions";
+import DrinksOptions from "@/components/layout/DrinksOptions";
+import Button from "@/components/navigation/Button";
 import styles from "@/styles/pages/Menu.module.css";
 
 export default function Menu() {
   return (
     <div id={styles.menu}>
       <div className={styles.menu_content}>
-        <h1>Menu</h1>
+        <h1>Burgers</h1>
         <BurgersOptions
           burgerCard={[
             {
@@ -40,6 +42,39 @@ export default function Menu() {
             },
           ]}
         />
+        <h1>Drinks</h1>
+        <DrinksOptions
+          drinkCard={[
+            {
+              title: "Orange",
+              price: 20,
+              src: "/juices/orange-juice.jpeg",
+              width: 128,
+              height: 128,
+              alt: "A drink",
+              description: "This is a Orange Drink",
+            },
+            {
+              title: "Red",
+              price: 10,
+              src: "/juices/orange-juice.jpeg",
+              width: 128,
+              height: 128,
+              alt: "A drink",
+              description: "This is a Orange Drink",
+            },
+            {
+              title: "Green",
+              price: 5,
+              src: "/juices/orange-juice.jpeg",
+              width: 128,
+              height: 128,
+              alt: "A drink",
+              description: "This is a Orange Drink",
+            },
+          ]}
+        />
+        <Button address="/" label="Order" acTarget="true"></Button>
       </div>
     </div>
   );

@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import styles from "@/styles/components/layout/BurgersOptions.module.css";
+import styles from "@/styles/components/layout/DrinksOptions.module.css";
 
-export default function BurgersOptions({ burgerCard }) {
+export default function drinksOptions({ drinkCard }) {
   const [displayValues, setDisplayValues] = useState([]);
-  const [burgerPrice, setBurgerPrice] = useState([]);
+  const [drinksPrice, setDrinksPrice] = useState([]);
   const [orderData, setOrderData] = useState([]);
 
   useEffect(() => {
     // Inicializa os valores de cada card com 0
-    setDisplayValues(new Array(burgerCard.length).fill(0));
-  }, [burgerCard]);
+    setDisplayValues(new Array(drinkCard.length).fill(0));
+  }, [drinkCard]);
 
   const handleIncreaseClick = (index) => {
     setDisplayValues((prevValues) => {
@@ -31,18 +31,18 @@ export default function BurgersOptions({ burgerCard }) {
 
   useEffect(() => {
     const calcPrice = () => {
-      const totalPrice = burgerCard.reduce((acc, burger, index) => {
-        return acc + displayValues[index] * burger.price;
+      const totalPrice = drinkCard.reduce((acc, drink, index) => {
+        return acc + displayValues[index] * drink.price;
       }, 0);
-      setBurgerPrice(totalPrice.toFixed(2));
+      setDrinksPrice(totalPrice.toFixed(2));
     };
     const saveOrderData = () => {
       const arrayOrder = [];
       displayValues.forEach((e, index) => {
         if (e > 0) {
           let obj = {
-            nome: burgerCard[index].title,
-            preco: burgerCard[index].price,
+            nome: drinkCard[index].title,
+            preco: drinkCard[index].price,
             qnt: e,
           };
           arrayOrder.push(obj);
@@ -58,16 +58,16 @@ export default function BurgersOptions({ burgerCard }) {
   }, [orderData]);
 
   return (
-    <section id={styles.burgersOptions}>
-      {burgerCard.map((e, index) => (
-        <div key={index} className={styles.burgersOptions_card__container}>
-          <div className={styles.burgersOptions_card_description}>
-            <div className={styles.burgersOptions_card_descriptionContainer}>
-              <div id={styles.burgersOptions_card_titlePrice}>
+    <section id={styles.drinksOptions}>
+      {drinkCard.map((e, index) => (
+        <div key={index} className={styles.drinksOptions_card__container}>
+          <div className={styles.drinksOptions_card_description}>
+            <div className={styles.drinksOptions_card_descriptionContainer}>
+              <div id={styles.drinksOptions_card_titlePrice}>
                 <h3>{e.title}</h3>
                 <h3>{`R$ ${e.price.toFixed(2)}`}</h3>
               </div>
-              <p className={styles.burgersOptions_card_description}>
+              <p className={styles.drinksOptions_card_description}>
                 {e.description}
               </p>
             </div>
