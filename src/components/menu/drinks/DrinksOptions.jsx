@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import styles from "@/styles/components/layout/DrinksOptions.module.css";
+import styles from "@/styles/components/menu/drinks/DrinksOptions.module.css";
 
 export default function drinksOptions({ drinkCard }) {
   const [displayValues, setDisplayValues] = useState([]);

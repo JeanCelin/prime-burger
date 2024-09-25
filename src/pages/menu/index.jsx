@@ -1,6 +1,6 @@
-import BurgersOptions from "@/components/layout/BurgersOptions";
-import DrinksOptions from "@/components/layout/DrinksOptions";
-import ButtonOrder from "@/components/navigation/ButtonOrder";
+import BurgersOptions from "@/components/menu/burgers/BurgersOptions";
+import DrinksOptions from "@/components/menu/drinks/DrinksOptions";
+import ButtonOrder from "@/components/buttons/ButtonOrder";
 import styles from "@/styles/pages/Menu.module.css";
 
 export default function Menu() {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import styles from "@/styles/components/layout/BurgersOptions.module.css";
+import styles from "@/styles/components/menu/burgers/BurgersOptions.module.css";
 
 export default function BurgersOptions({ burgerCard }) {
   const [displayValues, setDisplayValues] = useState([]);

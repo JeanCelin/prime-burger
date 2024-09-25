@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import styles from "@/styles/components/navigation/ButtonOrder.module.css";
+import styles from "@/styles/components/buttons/ButtonOrder.module.css";
 
 export default function ButtonOrder({ address, label, acTarget }) {
   let activeBlank = "";
