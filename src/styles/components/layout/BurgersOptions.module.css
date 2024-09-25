@@ -4,6 +4,8 @@
   align-items: center;
   gap: 2rem;
   margin: 3rem 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dotted white;
 }
 .burgersOptions_card_description {
   display: flex;

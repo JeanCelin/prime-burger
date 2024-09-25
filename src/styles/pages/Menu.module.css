@@ -1,12 +1,12 @@
 #menu {
   min-height: 100vh;
   background-size: cover;
-  background-color: #301209;
+  background-image: url("/background.jpg");
   display: flex;
   justify-content: center;
 }
 .menu_content {
-  background-color: black;
+  background-color: var(--theme-secondary-color);
   max-width: 1000px;
   display: flex;
   justify-content: center;
@@ -15,6 +15,6 @@
   margin: 8rem 0;
   border-radius: 10px;
   padding: 1rem 2rem 2rem;
-  box-shadow: 0 10px 10px black;
+  box-shadow: 0 10px 10px var(--theme-secondary-color);
   gap: 1rem;
 }

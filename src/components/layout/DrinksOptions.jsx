@@ -61,13 +61,13 @@ export default function drinksOptions({ drinkCard }) {
     <section id={styles.drinksOptions}>
       {drinkCard.map((e, index) => (
         <div key={index} className={styles.drinksOptions_card__container}>
-          <div className={styles.drinksOptions_card_description}>
-            <div className={styles.drinksOptions_card_descriptionContainer}>
-              <div id={styles.drinksOptions_card_titlePrice}>
+          <div className={styles.drinksOptions_card__description}>
+            <div className={styles.drinksOptions_card__descriptionContainer}>
+              <div id={styles.drinksOptions_card__titlePrice}>
                 <h3>{e.title}</h3>
                 <h3>{`R$ ${e.price.toFixed(2)}`}</h3>
               </div>
-              <p className={styles.drinksOptions_card_description}>
+              <p className={styles.drinksOptions_card__description}>
                 {e.description}
               </p>
             </div>

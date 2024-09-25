@@ -2,7 +2,7 @@
   /* THEMES */
   --theme-primary-color: rgba(225, 246, 62);
   --font-color: #fff;
-
+  --theme-secondary-color: #000;
   /* BUTTONS */
   /* Navbar Buttons   */
   --button-background: rgba(0, 0, 0, 0.668);
@@ -11,13 +11,14 @@
   --button-hover-background: #000;
   --button-hover-color: rgb(225, 246, 62);
 
-  /* Button Buy */
+  /* Button Order */
 
-  --buttonBuy-background: #000;
-  --buttonBuy-color: rgb(225, 246, 62);
+  --buttonOrder-background: var(--theme-primary-color);
+  --buttonOrder-color: rgb(255, 255, 255);
+
   /* Hover */
-  --button-hover-background: var(--theme-primary-color);
-  --button-hover-color: #000;
+  --buttonOrder-hover-background: var(--theme-primary-color);
+  --buttonOrder-hover-color: #000;
 }
 * {
   margin: 0;

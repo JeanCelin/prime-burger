@@ -1,6 +1,6 @@
 import BurgersOptions from "@/components/layout/BurgersOptions";
 import DrinksOptions from "@/components/layout/DrinksOptions";
-import Button from "@/components/navigation/Button";
+import ButtonOrder from "@/components/navigation/ButtonOrder";
 import styles from "@/styles/pages/Menu.module.css";
 
 export default function Menu() {
@@ -55,7 +55,7 @@ export default function Menu() {
               description: "This is a Orange Drink",
             },
             {
-              title: "Red",
+              title: "Suco de Laranja",
               price: 10,
               src: "/juices/orange-juice.jpeg",
               width: 128,
@@ -74,7 +74,10 @@ export default function Menu() {
             },
           ]}
         />
-        <Button address="/" label="Order" acTarget="true"></Button>
+        <ButtonOrder
+          address="/"
+          label="See Order"
+          acTarget="true"></ButtonOrder>
       </div>
     </div>
   );

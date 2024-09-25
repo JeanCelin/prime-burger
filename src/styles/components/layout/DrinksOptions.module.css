@@ -4,24 +4,28 @@
   align-items: center;
   gap: 2rem;
   margin: 3rem 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dotted white;
 }
-.drinksOptions_card_description {
+.drinksOptions_card__description {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
-.drinksOptions_card_descriptionContainer {
+.drinksOptions_card__descriptionContainer {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   padding: 0.5rem;
 }
-#drinksOptions_card_titlePrice {
+#drinksOptions_card__titlePrice {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
-.drinksOptions_card_description {
+
+.drinksOptions_card__description {
   max-width: 900px;
 }
 .shop {
@@ -56,14 +60,14 @@
     gap: 0;
     margin-bottom: 3rem;
   }
-  .drinksOptions_card_description {
+  .drinksOptions_card__description {
     flex-direction: column;
     gap: 0;
   }
   .shop {
     flex-direction: row-reverse;
   }
-  #drinksOptions_card_titlePrice {
+  #drinksOptions_card__titlePrice {
     flex-direction: column;
     text-align: center;
   }
