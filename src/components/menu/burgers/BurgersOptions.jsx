@@ -2,9 +2,12 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "@/styles/components/menu/burgers/BurgersOptions.module.css";
 
-export default function BurgersOptions({ burgerCard }) {
+export default function BurgersOptions({
+  burgerCard,
+  btnOrderActive,
+  handleOrder,
+}) {
   const [displayValues, setDisplayValues] = useState([]);
-  const [burgerPrice, setBurgerPrice] = useState([]);
   const [orderData, setOrderData] = useState([]);
 
   useEffect(() => {
@@ -19,6 +22,7 @@ export default function BurgersOptions({ burgerCard }) {
       return newValues;
     });
   };
+
   const handleDecreaseClick = (index) => {
     setDisplayValues((prevValues) => {
       const newValues = [...prevValues];
@@ -29,33 +33,27 @@ export default function BurgersOptions({ burgerCard }) {
     });
   };
 
+  const saveOrderData = () => {
+    const arrayOrder = [];
+    displayValues.forEach((e, index) => {
+      if (e > 0) {
+        let obj = {
+          nome: burgerCard[index].title,
+          preco: burgerCard[index].price,
+          qnt: e,
+        };
+        arrayOrder.push(obj);
+        setOrderData(arrayOrder);
+      }
+    });
+  };
+
   useEffect(() => {
-    const calcPrice = () => {
-      const totalPrice = burgerCard.reduce((acc, burger, index) => {
-        return acc + displayValues[index] * burger.price;
-      }, 0);
-      setBurgerPrice(totalPrice.toFixed(2));
-    };
-    const saveOrderData = () => {
-      const arrayOrder = [];
-      displayValues.forEach((e, index) => {
-        if (e > 0) {
-          let obj = {
-            nome: burgerCard[index].title,
-            preco: burgerCard[index].price,
-            qnt: e,
-          };
-          arrayOrder.push(obj);
-        }
-      });
-      setOrderData(arrayOrder);
-    };
-    saveOrderData();
-    calcPrice();
-  }, [displayValues]);
-  useEffect(() => {
-    console.log(orderData);
-  }, [orderData]);
+    if (btnOrderActive) {
+      saveOrderData();
+      handleOrder(orderData);
+    }
+  }, [btnOrderActive, displayValues]);
 
   return (
     <section id={styles.burgersOptions}>
@@ -74,12 +72,7 @@ export default function BurgersOptions({ burgerCard }) {
             <div className={styles.shop}>
               <button onClick={() => handleIncreaseClick(index)}>+</button>
               <div className={styles.shop_display}>{displayValues[index]}</div>
-              <button
-                onClick={() => {
-                  handleDecreaseClick(index);
-                }}>
-                -
-              </button>
+              <button onClick={() => handleDecreaseClick(index)}>-</button>
             </div>
           </div>
           <Image src={e.src} width={e.width} height={e.height} alt={e.alt} />
