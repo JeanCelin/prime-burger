@@ -1,0 +1,24 @@
+#order {
+  margin-top: 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--theme-secondary-color);
+  height: 100%;
+  padding: 2rem 2rem;
+  width: 1000px;
+  text-align: center;
+}
+
+.itens ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1rem;
+}
+.itens li {
+  display: flex;
+  padding: 0.5rem 0;
+  justify-content: space-between;
+  border-bottom: 2px dotted white;
+}

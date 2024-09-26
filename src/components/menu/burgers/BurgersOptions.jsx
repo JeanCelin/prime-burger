@@ -38,8 +38,8 @@ export default function BurgersOptions({
     displayValues.forEach((e, index) => {
       if (e > 0) {
         let obj = {
-          nome: burgerCard[index].title,
-          preco: burgerCard[index].price,
+          name: burgerCard[index].title,
+          price: burgerCard[index].price,
           qnt: e,
         };
         arrayOrder.push(obj);

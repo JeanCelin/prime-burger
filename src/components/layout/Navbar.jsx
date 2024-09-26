@@ -43,7 +43,6 @@ export default function NavBar({ itens, logoConfig }) {
       <div className={styles.navbar_content}>
         <Link className={styles.navbar_logoLink} href={"/"}>
           <div className={styles.navbar_business__container}>
-            {/* Logo icon */}
             <Image
               src={logoConfig[0].src}
               width={logoConfig[0].width}

@@ -14,7 +14,7 @@
   /* Button Order */
 
   --buttonOrder-background: var(--theme-primary-color);
-  --buttonOrder-color: rgb(255, 255, 255);
+  --buttonOrder-color: rgb(0, 0, 0);
 
   /* Hover */
   --buttonOrder-hover-background: var(--theme-primary-color);

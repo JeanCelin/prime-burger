@@ -38,8 +38,8 @@ export default function DrinksOptions({
     displayValues.forEach((e, index) => {
       if (e > 0) {
         let obj = {
-          nome: drinkCard[index].title,
-          preco: drinkCard[index].price,
+          name: drinkCard[index].title,
+          price: drinkCard[index].price,
           qnt: e,
         };
         arrayOrder.push(obj);
