@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import styles from "@/styles/components/buttons/Button.module.css";
 
-export default function Button({ address, label, acTarget }) {
+export default function ButtonPri({ address, label, acTarget }) {
   let activeBlank = "";
 
   if (acTarget) {

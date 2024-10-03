@@ -2,18 +2,42 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "@/styles/components/menu/drinks/drinksOptions.module.css";
 
-export default function DrinksOptions({
-  drinkCard,
-  btnOrderActive,
-  handleOrder,
-}) {
+export default function DrinksOptions({ btnOrderActive, handleOrder }) {
+  const drinkCard = [
+    {
+      title: "Orange",
+      price: 20,
+      src: "/juices/orange-juice.jpeg",
+      width: 128,
+      height: 128,
+      alt: "A drink",
+      description: "This is a Orange Drink",
+    },
+    {
+      title: "Suco de Laranja",
+      price: 10,
+      src: "/juices/orange-juice.jpeg",
+      width: 128,
+      height: 128,
+      alt: "A drink",
+      description: "This is a Orange Drink",
+    },
+    {
+      title: "Green",
+      price: 5,
+      src: "/juices/orange-juice.jpeg",
+      width: 128,
+      height: 128,
+      alt: "A drink",
+      description: "This is a Orange Drink",
+    },
+  ];
+
   const [displayValues, setDisplayValues] = useState([]);
-  const [orderData, setOrderData] = useState([]);
 
   useEffect(() => {
-    // Inicializa os valores de cada card com 0
     setDisplayValues(new Array(drinkCard.length).fill(0));
-  }, [drinkCard]);
+  }, []);
 
   const handleIncreaseClick = (index) => {
     setDisplayValues((prevValues) => {
@@ -43,15 +67,15 @@ export default function DrinksOptions({
           qnt: e,
         };
         arrayOrder.push(obj);
-        setOrderData(arrayOrder);
       }
     });
+    return arrayOrder;
   };
 
   useEffect(() => {
     if (btnOrderActive) {
-      saveOrderData();
-      handleOrder(orderData);
+      const newOrderData = saveOrderData();
+      handleOrder(newOrderData);
     }
   }, [btnOrderActive, displayValues]);
 

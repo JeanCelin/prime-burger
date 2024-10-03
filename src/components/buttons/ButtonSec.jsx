@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import styles from "@/styles/components/buttons/ButtonOrder.module.css";
 
-export default function ButtonOrder({ address, label, acTarget }) {
+export default function ButtonSec({ address, label, acTarget }) {
   let activeBlank = "";
 
   if (acTarget) {

@@ -2,18 +2,45 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "@/styles/components/menu/burgers/BurgersOptions.module.css";
 
-export default function BurgersOptions({
-  burgerCard,
-  btnOrderActive,
-  handleOrder,
-}) {
+export default function BurgersOptions({ btnOrderActive, handleOrder }) {
+  const burgerCard = [
+    {
+      title: "Complete",
+      price: 20.99,
+      src: "/burgers/chicken-burger.png",
+      width: 128,
+      height: 128,
+      alt: "A bacon burger",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro   impedit, quo cumque qui error nisi unde, reprehenderit in corporis architecto necessitatibus, veritatis dolorem esse quisquam quos. Veritatis, aliquid quos? Est!",
+    },
+    {
+      title: "Chicken",
+      price: 20,
+      src: "/burgers/chicken-burger.png",
+      width: 128,
+      height: 128,
+      alt: "A bacon burger",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro   impedit, quo cumque qui error nisi unde, reprehenderit in corporis architecto necessitatibus, veritatis dolorem esse quisquam quos. Veritatis, aliquid quos? Est!",
+    },
+    {
+      title: "X-Tudo",
+      price: 19.99,
+      src: "/burgers/chicken-burger.png",
+      width: 128,
+      height: 128,
+      alt: "A bacon burger",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro   impedit, quo cumque qui error nisi unde, reprehenderit in corporis architecto necessitatibus, veritatis dolorem esse quisquam quos. Veritatis, aliquid quos? Est!",
+    },
+  ];
+
   const [displayValues, setDisplayValues] = useState([]);
-  const [orderData, setOrderData] = useState([]);
 
   useEffect(() => {
-    // Inicializa os valores de cada card com 0
     setDisplayValues(new Array(burgerCard.length).fill(0));
-  }, [burgerCard]);
+  }, []);
 
   const handleIncreaseClick = (index) => {
     setDisplayValues((prevValues) => {
@@ -43,15 +70,15 @@ export default function BurgersOptions({
           qnt: e,
         };
         arrayOrder.push(obj);
-        setOrderData(arrayOrder);
       }
     });
+    return arrayOrder; // Retorna os dados do pedido
   };
 
   useEffect(() => {
     if (btnOrderActive) {
-      saveOrderData();
-      handleOrder(orderData);
+      const newOrderData = saveOrderData(); // Gera os dados do pedido
+      handleOrder(newOrderData); // Passa os dados diretamente para a função de callback
     }
   }, [btnOrderActive, displayValues]);
 

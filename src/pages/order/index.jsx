@@ -2,14 +2,19 @@ import { useEffect, useState } from "react";
 import styles from "@/styles/pages/Order.module.css";
 
 export default function Order({ burger, drink }) {
-  const [getBurgersResume, setGetBurgersResume] = useState([]);
-  const [getDrinksResume, setGetDrinksResume] = useState([]);
-  const [getTotal, setGetTotal] = useState(0);
+  const [displayOrder, setDisplayOrder] = useState(null);
 
   useEffect(() => {
     let total = 0;
-
-    if (burger) {
+    console.log(burger);
+    if (burger.length === 0) {
+      setDisplayOrder(
+        <div className={styles.order__nonSelected}>
+          <h2>Select at least one burger</h2>
+          <button>Voltar</button>
+        </div>
+      );
+    } else {
       const burgersList = burger.map((e, index) => {
         total += e.qnt * e.price;
         return (
@@ -21,10 +26,7 @@ export default function Order({ burger, drink }) {
           </li>
         );
       });
-      setGetBurgersResume(burgersList);
-    }
 
-    if (drink) {
       const drinksList = drink.map((e, index) => {
         total += e.qnt * e.price;
         return (
@@ -36,29 +38,31 @@ export default function Order({ burger, drink }) {
           </li>
         );
       });
-      setGetDrinksResume(drinksList);
-    }
 
-    setGetTotal(total);
-    sessionStorage.clear();
+      setDisplayOrder(
+        <div id={styles.order}>
+          <h2>Your Order</h2>
+          <div className={styles.burgers}>
+            {burger.length > 0 && (
+              <div className={styles.itens}>
+                <h3>Burgers</h3>
+                <ul>{burgersList}</ul>
+              </div>
+            )}
+          </div>
+          <div className={styles.drinks}>
+            {drink.length > 0 && (
+              <div className={styles.itens}>
+                <h3>Drinks</h3>
+                <ul>{drinksList}</ul>
+              </div>
+            )}
+          </div>
+          <h3>Total: ${total.toFixed(2)}</h3>
+        </div>
+      );
+    }
   }, [burger, drink]);
 
-  return (
-    <div id={styles.order}>
-      <h2>Your Order</h2>
-      <div className={styles.burgers}>
-        <div className={styles.itens}>
-          {burger.length > 0 && <h3>Burgers</h3>}
-          <ul>{getBurgersResume}</ul>
-        </div>
-      </div>
-      <div className={styles.drinks}>
-        <div className={styles.itens}>
-          {drink.length > 0 && <h3>Drinks</h3>}
-          <ul>{getDrinksResume}</ul>
-        </div>
-      </div>
-      <h3>Total: ${getTotal.toFixed(2)}</h3>
-    </div>
-  );
+  return <>{displayOrder}</>;
 }

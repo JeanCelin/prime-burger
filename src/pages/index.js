@@ -1,4 +1,4 @@
-import Button from "@/components/buttons/Button";
+import ButtonPri from "@/components/buttons/ButtonPri";
 import styles from "@/styles/pages/Home.module.css";
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
           <p>
             Located in the nearest shopping mall. We will be happy to serve you!
           </p>
-          <Button address="/menu" label="See menu" />
+          <ButtonPri address="/menu" label="See menu" />
         </div>
       </main>
     </>
