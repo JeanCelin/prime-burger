@@ -2,7 +2,7 @@ import BurgersOptions from "@/components/menu/burgers/BurgersOptions";
 import DrinksOptions from "@/components/menu/drinks/DrinksOptions";
 import styles from "@/styles/pages/Menu.module.css";
 import { useEffect, useState } from "react";
-import Order from "../order";
+import Order from "../../components/menu/order";
 
 export default function Menu() {
   const [btnOrderActive, setBtnOrderActive] = useState(false);
@@ -46,9 +46,7 @@ export default function Menu() {
             btnOrderActive={btnOrderActive}
             handleOrder={handleDrinkOrder}
           />
-          {errSelected && (
-            <p className={styles.error}>* Select at least one burger</p>
-          )}
+          {errSelected && <p>* Select at least one burger</p>}
           <button id={styles.menu__buttonOrder} onClick={handleClick}>
             ORDER
           </button>

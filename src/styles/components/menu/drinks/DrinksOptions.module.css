@@ -37,15 +37,23 @@
   margin: 0.5rem;
 }
 .shop button {
+  font-weight: bold;
   text-align: center;
   background: none;
   width: 30px;
   height: 30px;
   cursor: pointer;
+  background-color: rgba(225, 246, 62, 0.8);
+  color: var(--theme-secondary-color);
+  border: none;
+  border-radius: 5px;
+  transition: all 400ms;
 }
 .shop button:hover {
+  scale: 1.07;
+
   text-align: center;
-  background-color: black;
+  background-color: var(--theme-primary-color);
   width: 30px;
   height: 30px;
   cursor: pointer;

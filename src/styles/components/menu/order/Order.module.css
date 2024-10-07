@@ -9,6 +9,15 @@
   width: 1000px;
   text-align: center;
 }
+.totalLine {
+  display: flex;
+  justify-content: end;
+  gap: 2rem;
+  padding: 0 0.3rem;
+}
+.order__total {
+  text-align: end;
+}
 .order__nonSelected {
   display: flex;
   flex-direction: column;

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import styles from "@/styles/components/menu/drinks/drinksOptions.module.css";
+import styles from "@/styles/components/menu/drinks/DrinksOptions.module.css";
 
 export default function DrinksOptions({ btnOrderActive, handleOrder }) {
   const drinkCard = [

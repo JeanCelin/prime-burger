@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "@/styles/pages/Order.module.css";
+import styles from "@/styles/components/menu/order/Order.module.css";
 
 export default function Order({ burger, drink }) {
   const [displayOrder, setDisplayOrder] = useState(null);
@@ -58,7 +58,11 @@ export default function Order({ burger, drink }) {
               </div>
             )}
           </div>
-          <h3>Total: ${total.toFixed(2)}</h3>
+
+          <div className={styles.totalLine}>
+            <h3 className={styles.order__total}>Amount to pay:</h3>
+            <h3>${total.toFixed(2)}</h3>
+          </div>
         </div>
       );
     }
