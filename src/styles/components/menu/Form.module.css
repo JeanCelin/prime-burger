@@ -1,0 +1,58 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  max-width: 400px; /* Largura máxima do formulário */
+  margin: auto; /* Centraliza o formulário na tela */
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.label {
+  color: var(--theme-primary-color); /* Cor primária */
+  font-weight: bold; /* Texto em negrito */
+  margin-bottom: 8px;
+  display: block; /* Faz o label ocupar a linha inteira */
+}
+
+.input {
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 8px; /* Bordas arredondadas */
+  font-size: 16px;
+  background-color: #fff; /* Fundo branco para os campos de entrada */
+  color: #333; /* Cor do texto */
+  transition: border 0.3s;
+}
+
+.input:focus {
+  border-color: var(--theme-primary-color); /* Cor primária ao focar no campo */
+  outline: none; /* Remove o contorno padrão do campo */
+  box-shadow: 0 0 5px rgba(225, 246, 62, 0.5); /* Sombra ao focar no campo */
+}
+
+.button {
+  background-color: var(--theme-primary-color); /* Cor primária do botão */
+  color: #121212; /* Texto em preto */
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 18px; /* Aumenta o tamanho da fonte */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Adiciona transição para transformação */
+}
+
+.button:hover {
+  background-color: rgba(225, 246, 62, 0.8); /* Efeito de hover */
+  transform: scale(1.05); /* Leve aumento no botão ao passar o mouse */
+}
+
+@media (max-width: 500px) {
+  .formContainer {
+    width: 90%; /* Largura responsiva em telas pequenas */
+  }
+}

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import styles from "@/styles/components/buttons/Button.module.css";
 
-export default function ButtonPri({ address, label, acTarget }) {
+export default function ButtonSec({ address, label, acTarget, btnStyle }) {
   let activeBlank = "";
 
   if (acTarget) {
@@ -11,7 +11,7 @@ export default function ButtonPri({ address, label, acTarget }) {
 
   return (
     <Link href={address} target={activeBlank}>
-      <button className={styles.button}>{label}</button>
+      <button className={`${styles[btnStyle]}`}>{label}</button>
     </Link>
   );
 }
