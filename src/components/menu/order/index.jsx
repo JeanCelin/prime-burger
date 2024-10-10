@@ -3,7 +3,7 @@ import styles from "@/styles/components/menu/order/Order.module.css";
 import btnStyles from "@/styles/components/buttons/Button.module.css";
 import Form from "../form/Form";
 
-export default function Order({ burger, drink }) {
+export default function Order({ burger, drink, back }) {
   const [displayOrder, setDisplayOrder] = useState(null);
   const [getForm, setGetForm] = useState(false);
 
@@ -14,7 +14,11 @@ export default function Order({ burger, drink }) {
       setDisplayOrder(
         <div className={styles.order__nonSelected}>
           <h2>Select at least one burger</h2>
-          <button>Voltar</button>
+          <button
+            className={btnStyles.buttonSecondary}
+            onClick={() => back(false)}>
+            back
+          </button>
         </div>
       );
     } else {
@@ -70,7 +74,12 @@ export default function Order({ burger, drink }) {
               <h3 className={styles.order__total}>Amount to pay:</h3>
               <h3>${total.toFixed(2)}</h3>
             </div>
-            <div>
+            <div className={styles.btn_container}>
+              <button
+                className={btnStyles.buttonSecondary}
+                onClick={() => back(false)}>
+                back
+              </button>
               <button
                 className={btnStyles.buttonSecondary}
                 onClick={() => setGetForm(true)}>

@@ -85,7 +85,7 @@ export default function DrinksOptions({ btnOrderActive, handleOrder }) {
         <div key={index} className={styles.drinksOptions_card__container}>
           <div className={styles.drinksOptions_card__description}>
             <div className={styles.drinksOptions_card__descriptionContainer}>
-              <div id={styles.drinksOptions_card_titlePrice}>
+              <div id={styles.drinksOptions_card__titlePrice}>
                 <h3>{e.title}</h3>
                 <h3>{`R$ ${e.price.toFixed(2)}`}</h3>
               </div>

@@ -11,6 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 900px;
   gap: 2rem;
 }
 .drinksOptions_card__descriptionContainer {
@@ -25,9 +26,6 @@
   flex-direction: column;
 }
 
-.drinksOptions_card__description {
-  max-width: 900px;
-}
 .shop {
   display: flex;
   flex-direction: column;

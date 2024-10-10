@@ -1,6 +1,7 @@
 import BurgersOptions from "@/components/menu/burgers/BurgersOptions";
 import DrinksOptions from "@/components/menu/drinks/DrinksOptions";
 import styles from "@/styles/pages/Menu.module.css";
+import btnStyles from "@/styles/components/buttons/Button.module.css";
 import { useEffect, useState } from "react";
 import Order from "../../components/menu/order";
 
@@ -33,7 +34,11 @@ export default function Menu() {
   return (
     <div id={styles.menu}>
       {showOrder ? (
-        <Order burger={getOrderBurgerData} drink={getOrderDrinkData} />
+        <Order
+          burger={getOrderBurgerData}
+          drink={getOrderDrinkData}
+          back={setShowOrder}
+        />
       ) : (
         <div className={styles.menu_content}>
           <h1>Burgers</h1>
@@ -47,7 +52,7 @@ export default function Menu() {
             handleOrder={handleDrinkOrder}
           />
           {errSelected && <p>* Select at least one burger</p>}
-          <button id={styles.menu__buttonOrder} onClick={handleClick}>
+          <button className={btnStyles.buttonSecondary} onClick={handleClick}>
             ORDER
           </button>
         </div>
