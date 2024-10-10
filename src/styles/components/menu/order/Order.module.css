@@ -8,6 +8,7 @@
   padding: 2rem 2rem;
   width: 1000px;
   text-align: center;
+  font-family: var(--font-primary);
 }
 .totalLine {
   display: flex;

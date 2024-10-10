@@ -9,10 +9,13 @@
 }
 .drinksOptions_card__description {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   max-width: 900px;
   gap: 2rem;
+  display: flex;
+
+  width: 100%;
 }
 .drinksOptions_card__descriptionContainer {
   display: flex;

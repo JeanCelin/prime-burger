@@ -5,34 +5,54 @@ import styles from "@/styles/components/menu/burgers/BurgersOptions.module.css";
 export default function BurgersOptions({ btnOrderActive, handleOrder }) {
   const burgerCard = [
     {
-      title: "Complete",
-      price: 20.99,
-      src: "/burgers/chicken-burger.png",
+      title: "Clássico Cheeseburger",
+      price: 23.27,
+      src: "/burgers/cheese-burger.jpeg",
       width: 128,
       height: 128,
-      alt: "A bacon burger",
+      alt: "A Cheeseburger",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro   impedit, quo cumque qui error nisi unde, reprehenderit in corporis architecto necessitatibus, veritatis dolorem esse quisquam quos. Veritatis, aliquid quos? Est!",
+        "bun, beef patty, cheddar cheese, lettuce, tomato, special sauce.",
     },
     {
-      title: "Chicken",
-      price: 20,
-      src: "/burgers/chicken-burger.png",
+      title: "Bacon BBQ",
+      price: 25.98,
+      src: "/burgers/bacon-bbq.jpeg",
       width: 128,
       height: 128,
-      alt: "A bacon burger",
+      alt: "A burger",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro   impedit, quo cumque qui error nisi unde, reprehenderit in corporis architecto necessitatibus, veritatis dolorem esse quisquam quos. Veritatis, aliquid quos? Est!",
+        "brioche bun, beef patty, bacon, cheddar cheese, caramelized onions, barbecue sauce.",
     },
     {
-      title: "X-Tudo",
-      price: 19.99,
-      src: "/burgers/chicken-burger.png",
+      title: "Veggie Delight",
+      price: 32.6,
+      src: "/burgers/veggie-delight.jpeg",
       width: 128,
       height: 128,
       alt: "A bacon burger",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro   impedit, quo cumque qui error nisi unde, reprehenderit in corporis architecto necessitatibus, veritatis dolorem esse quisquam quos. Veritatis, aliquid quos? Est!",
+        "whole wheat bun, chickpea patty, avocado, lettuce, tomato, yogurt sauce.",
+    },
+    {
+      title: "Frango Crispy",
+      price: 24.32,
+      src: "/burgers/chicken-crispy.png",
+      width: 128,
+      height: 128,
+      alt: "A chicken burger",
+      description:
+        "bun, breaded chicken fillet, lettuce, tomato, mayonnaise, pickles.",
+    },
+    {
+      title: "Lamb Burger",
+      price: 28.99,
+      src: "/burgers/lamb-burger.jpeg",
+      width: 128,
+      height: 128,
+      alt: "A bacon burger",
+      description:
+        "pita bread, lamb patty, feta cheese, tzatziki sauce, lettuce, tomato.",
     },
   ];
 
@@ -72,13 +92,13 @@ export default function BurgersOptions({ btnOrderActive, handleOrder }) {
         arrayOrder.push(obj);
       }
     });
-    return arrayOrder; // Retorna os dados do pedido
+    return arrayOrder;
   };
 
   useEffect(() => {
     if (btnOrderActive) {
-      const newOrderData = saveOrderData(); // Gera os dados do pedido
-      handleOrder(newOrderData); // Passa os dados diretamente para a função de callback
+      const newOrderData = saveOrderData();
+      handleOrder(newOrderData);
     }
   }, [btnOrderActive, displayValues]);
 

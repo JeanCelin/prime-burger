@@ -22,4 +22,8 @@
   padding: 1rem;
   gap: 3rem;
   height: 100%;
+  font-family: var(--font-primary);
+}
+.home_content h1 {
+  font-family: var(--font-secondary);
 }

@@ -4,6 +4,9 @@
   background-image: url("/background.jpg");
   display: flex;
   justify-content: center;
+  font-family: var(--font-secondary);
+  line-height: 1.2;
+  word-spacing: 2.5px;
 }
 
 .menu_content {

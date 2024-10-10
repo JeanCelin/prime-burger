@@ -2,7 +2,7 @@
   /* THEMES */
   --theme-primary-color: rgba(225, 246, 62);
   --font-color: #fff;
-  --theme-secondary-color: #090909;
+  --theme-secondary-color: #000000;
   /* BUTTONS */
 
   /* Navbar Buttons   */
@@ -20,6 +20,9 @@
   /* Hover */
   --buttonOrder-hover-background: var(--theme-primary-color);
   --buttonOrder-hover-color: #000;
+
+  --font-primary: "Roboto", sans-serif;
+  --font-secondary: "Special Elite", system-ui;
 }
 * {
   margin: 0;
@@ -27,9 +30,9 @@
   box-sizing: border-box;
   color: var(--font-color);
 
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-style: normal;
+  font-style: normal; */
 }
 h1 {
   color: var(--theme-primary-color);
