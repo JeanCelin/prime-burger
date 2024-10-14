@@ -1,6 +1,7 @@
 #home {
   position: relative;
   height: 100vh;
+  color: var(--font-color);
 }
 #home_background {
   background-image: url("/bg-burger.jpeg");
@@ -22,8 +23,8 @@
   padding: 1rem;
   gap: 3rem;
   height: 100%;
-  font-family: var(--font-primary);
+  font-family: var(--font-secondary);
 }
 .home_content h1 {
-  font-family: var(--font-secondary);
+  font-family: var(--font-primary);
 }

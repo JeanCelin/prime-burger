@@ -1,8 +1,8 @@
 :root {
   /* THEMES */
-  --theme-primary-color: rgba(225, 246, 62);
-  --font-color: #fff;
-  --theme-secondary-color: #000000;
+  --theme-primary-color: rgb(249, 148, 7);
+  --font-color: #e3e3e3;
+  --theme-secondary-color: rgb(22, 22, 22);
   /* BUTTONS */
 
   /* Navbar Buttons   */
@@ -10,7 +10,7 @@
   --button-color: #fff;
   /* Hover */
   --button-hover-background: #000;
-  --button-hover-color: rgb(225, 246, 62);
+  --button-hover-color: rgb(249, 148, 7);
 
   /* Button Secondary*/
 
@@ -21,14 +21,13 @@
   --buttonOrder-hover-background: var(--theme-primary-color);
   --buttonOrder-hover-color: #000;
 
-  --font-primary: "Roboto", sans-serif;
-  --font-secondary: "Special Elite", system-ui;
+  --font-primary: "Special Elite", system-ui;
+  --font-secondary: "Roboto", sans-serif;
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: var(--font-color);
 
   /* font-family: "Roboto", sans-serif;
   font-weight: 400;

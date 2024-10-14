@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import styles from "@/styles/components/menu/order/Order.module.css";
 import btnStyles from "@/styles/components/buttons/Button.module.css";
 import Form from "../form/Form";
@@ -48,43 +49,45 @@ export default function Order({ burger, drink, back }) {
 
       setDisplayOrder(
         getForm ? (
-          <div id={styles.order}>
+          <div className={styles.form_container}>
             <Form />
           </div>
         ) : (
           <div id={styles.order}>
-            <h2>Your Order</h2>
-            <div className={styles.burgers}>
-              {burger.length > 0 && (
-                <div className={styles.itens}>
-                  <h3>Burgers</h3>
-                  <ul>{burgersList}</ul>
-                </div>
-              )}
-            </div>
-            <div className={styles.drinks}>
-              {drink.length > 0 && (
-                <div className={styles.itens}>
-                  <h3>Drinks</h3>
-                  <ul>{drinksList}</ul>
-                </div>
-              )}
-            </div>
-            <div className={styles.totalLine}>
-              <h3 className={styles.order__total}>Amount to pay:</h3>
-              <h3>${total.toFixed(2)}</h3>
-            </div>
-            <div className={styles.btn_container}>
-              <button
-                className={btnStyles.buttonSecondary}
-                onClick={() => back(false)}>
-                back
-              </button>
-              <button
-                className={btnStyles.buttonSecondary}
-                onClick={() => setGetForm(true)}>
-                Next
-              </button>
+            <div className={styles.order_content}>
+              <h2>Your Order</h2>
+              <div className={styles.burgers}>
+                {burger.length > 0 && (
+                  <div className={styles.itens}>
+                    <h3>Burgers</h3>
+                    <ul>{burgersList}</ul>
+                  </div>
+                )}
+              </div>
+              <div className={styles.drinks}>
+                {drink.length > 0 && (
+                  <div className={styles.itens}>
+                    <h3>Drinks</h3>
+                    <ul>{drinksList}</ul>
+                  </div>
+                )}
+              </div>
+              <div className={styles.totalLine}>
+                <h3 className={styles.order__total}>Amount to pay:</h3>
+                <h3>${total.toFixed(2)}</h3>
+              </div>
+              <div className={styles.btn_container}>
+                <button
+                  className={btnStyles.buttonSecondary}
+                  onClick={() => back(false)}>
+                  back
+                </button>
+                <button
+                  className={btnStyles.buttonSecondary}
+                  onClick={() => setGetForm(true)}>
+                  Next
+                </button>
+              </div>
             </div>
           </div>
         )

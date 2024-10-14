@@ -5,7 +5,7 @@
   gap: 2rem;
   margin: 3rem 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px dotted white;
+  border-bottom: 1px dotted rgb(249, 148, 7);
 }
 .burgersOptions_card_description {
   display: flex;
@@ -45,7 +45,7 @@
   width: 30px;
   height: 30px;
   cursor: pointer;
-  background-color: rgba(225, 246, 62, 0.8);
+  background-color: var(--theme-primary-color);
   color: var(--theme-secondary-color);
   border: none;
   border-radius: 5px;

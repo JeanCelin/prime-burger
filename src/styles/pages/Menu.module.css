@@ -4,21 +4,34 @@
   background-image: url("/background.jpg");
   display: flex;
   justify-content: center;
-  font-family: var(--font-secondary);
+  font-family: var(--font-primary);
+  color: var(--font-color);
   line-height: 1.2;
   word-spacing: 2.5px;
 }
 
 .menu_content {
-  background-color: var(--theme-secondary-color);
   max-width: 1000px;
+  min-height: 100%;
   display: flex;
+  margin-top: 72px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 8rem 0;
   border-radius: 10px;
   padding: 2rem;
+  background-color: var(--theme-secondary-color);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  background-image: url("/logo-prime-burger-780x770.png");
+  background-repeat: no-repeat;
+  background-position: 3rem 20px;
+  background-size: 140px;
+
   gap: 2rem;
+}
+
+@media (max-width: 650px) {
+  .menu_content {
+    background-image: none;
+  }
 }

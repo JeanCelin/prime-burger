@@ -11,6 +11,16 @@
   justify-content: space-between;
   font-family: var(--font-primary);
 }
+.navbar__itens {
+  color: var(--font-color);
+}
+.navbar__itens:hover {
+  color: var(--primary-color);
+  border-bottom: 1px solid rgb(249, 148, 7);
+}
+.navbar_business__name {
+  color: rgb(249, 148, 7);
+}
 .navbar_largeScreenItens {
   display: flex;
   text-decoration: none;
@@ -26,7 +36,7 @@
 }
 .navbar_links:hover {
   cursor: pointer;
-  color: var(--theme-primary-color);
+  color: rgb(249, 148, 7);
 }
 .navbar_logoLink {
   text-decoration: none;

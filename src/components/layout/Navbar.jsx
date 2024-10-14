@@ -25,7 +25,9 @@ export default function NavBar({ itens, logoConfig }) {
             key={index}
             className={styles.navbar_links}
             href={e.address}>
-            <li key={index}>{e.label}</li>
+            <li className={styles.navbar__itens} key={index}>
+              {e.label}
+            </li>
           </Link>
         );
       })
@@ -50,7 +52,9 @@ export default function NavBar({ itens, logoConfig }) {
               alt={logoConfig[0].alt}
               priority
             />
-            <h4>{logoConfig[0].title}</h4>
+            <h4 className={styles.navbar_business__name}>
+              {logoConfig[0].title}
+            </h4>
           </div>
         </Link>
         {widthScreen > 600 ? (

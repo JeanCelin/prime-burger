@@ -34,11 +34,13 @@ export default function Menu() {
   return (
     <div id={styles.menu}>
       {showOrder ? (
-        <Order
-          burger={getOrderBurgerData}
-          drink={getOrderDrinkData}
-          back={setShowOrder}
-        />
+        <div className={styles.menu_order}>
+          <Order
+            burger={getOrderBurgerData}
+            drink={getOrderDrinkData}
+            back={setShowOrder}
+          />
+        </div>
       ) : (
         <div className={styles.menu_content}>
           <h1>Burgers</h1>

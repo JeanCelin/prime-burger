@@ -1,4 +1,5 @@
 import Button from "@/components/buttons/Button";
+import Features from "@/components/features-card/Features";
 import styles from "@/styles/pages/Home.module.css";
 
 export default function Home() {
@@ -14,6 +15,9 @@ export default function Home() {
           <Button address="/menu" label="See menu" btnStyle="buttonPrimary" />
         </div>
       </main>
+      <section>
+        <Features />
+      </section>
     </>
   );
 }

@@ -5,7 +5,7 @@ import styles from "@/styles/components/menu/burgers/BurgersOptions.module.css";
 export default function BurgersOptions({ btnOrderActive, handleOrder }) {
   const burgerCard = [
     {
-      title: "Clássico Cheeseburger",
+      title: "Classic Cheeseburger",
       price: 23.27,
       src: "/burgers/cheese-burger.jpeg",
       width: 128,
@@ -35,7 +35,7 @@ export default function BurgersOptions({ btnOrderActive, handleOrder }) {
         "whole wheat bun, chickpea patty, avocado, lettuce, tomato, yogurt sauce.",
     },
     {
-      title: "Frango Crispy",
+      title: "Chicken Crispy",
       price: 24.32,
       src: "/burgers/chicken-crispy.png",
       width: 128,
