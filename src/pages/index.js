@@ -11,7 +11,8 @@ export default function Home() {
         <div className={styles.home_content}>
           <h1>PRIME BURGER</h1>
           <p>
-            Located in the nearest shopping mall. We will be happy to serve you!
+            Speed that surprises, quality that impresses, and flavor that
+            captivates!
           </p>
           <Button address="/menu" label="See menu" btnStyle="buttonPrimary" />
         </div>

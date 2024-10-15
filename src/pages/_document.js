@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import Script from "next/script";
 
 export default function Document() {
   return (
@@ -28,6 +29,17 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        {/* Ion Icons */}
+        <Script
+          src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+          type="module"
+          strategy="lazyOnload" // Adia o carregamento para após o carregamento inicial
+        />
+        <Script
+          src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+          noModule
+          strategy="lazyOnload" // Adia o carregamento para após o carregamento inicial
+        />
       </body>
     </Html>
   );

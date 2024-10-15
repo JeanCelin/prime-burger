@@ -3,6 +3,7 @@
   padding: 2rem;
 }
 .galleryContainer h1 {
+  font-family: var(--font-secondary);
   text-align: center;
   padding-bottom: 1rem;
 }

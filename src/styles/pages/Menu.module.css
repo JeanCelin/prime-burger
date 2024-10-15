@@ -8,6 +8,7 @@
   color: var(--font-color);
   line-height: 1.2;
   word-spacing: 2.5px;
+  padding-bottom: 1rem;
 }
 
 .menu_content {

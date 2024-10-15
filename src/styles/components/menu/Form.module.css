@@ -6,9 +6,10 @@
   gap: 1rem;
 
   border-radius: 12px;
+  background-color: var(--theme-secondary-color);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   max-width: 400px;
-  padding-top: 80px;
+  padding: 2rem;
   margin: auto;
 }
 .formContainer h2 {

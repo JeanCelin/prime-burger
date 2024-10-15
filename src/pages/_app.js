@@ -1,5 +1,6 @@
 import "@/styles/globals/globals.css";
 import NavBar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 export default function App({ Component, pageProps }) {
   return (
@@ -8,9 +9,7 @@ export default function App({ Component, pageProps }) {
         itens={[
           { label: "Home", address: "/" },
           { label: "Menu", address: "/menu" },
-          { label: "teste3", address: "/" },
-          { label: "teste4", address: "/" },
-          { label: "teste5", address: "/" },
+          { label: "About", address: "/about" },
         ]}
         logoConfig={[
           {
@@ -23,6 +22,7 @@ export default function App({ Component, pageProps }) {
         ]}
       />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }
