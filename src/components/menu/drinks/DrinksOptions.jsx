@@ -7,7 +7,7 @@ export default function DrinksOptions({ btnOrderActive, handleOrder }) {
     {
       title: "Orange Juice",
       price: 4.5,
-      src: "/juices/orange-juice.jpeg",
+      src: "/juices/orange-juice/orange-juice-128w.jpeg",
       width: 128,
       height: 128,
       alt: "A drink",
@@ -16,7 +16,7 @@ export default function DrinksOptions({ btnOrderActive, handleOrder }) {
     {
       title: "Pineapple Juice",
       price: 5.0,
-      src: "/juices/pineapple-juice.jpeg",
+      src: "/juices/pineapple-juice/pineapple-juice-128w.jpeg",
       width: 128,
       height: 128,
       alt: "A drink",
@@ -25,7 +25,7 @@ export default function DrinksOptions({ btnOrderActive, handleOrder }) {
     {
       title: "Green Juice",
       price: 6.0,
-      src: "/juices/green-juice.jpeg",
+      src: "/juices/green-juice/green-juice-128w.jpeg",
       width: 128,
       height: 128,
       alt: "A drink",
@@ -34,7 +34,7 @@ export default function DrinksOptions({ btnOrderActive, handleOrder }) {
     {
       title: "Mango Juice",
       price: 4.5,
-      src: "/juices/sleeve-juice.jpeg",
+      src: "/juices/sleeve-juice/sleeve-juice-128w.jpeg",
       width: 128,
       height: 128,
       alt: "A drink",
@@ -43,7 +43,7 @@ export default function DrinksOptions({ btnOrderActive, handleOrder }) {
     {
       title: "Watermelon Juice",
       price: 4.0,
-      src: "/juices/watermelon-juice.jpeg",
+      src: "/juices/watermelon-juice/watermelon-juice-128w.jpeg",
       width: 128,
       height: 128,
       alt: "A drink",

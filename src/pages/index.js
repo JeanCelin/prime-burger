@@ -1,5 +1,6 @@
 import Button from "@/components/buttons/Button";
 import Features from "@/components/features-card/Features";
+import Gallery from "@/components/gallery/Gallery";
 import styles from "@/styles/pages/Home.module.css";
 
 export default function Home() {
@@ -18,6 +19,11 @@ export default function Home() {
       <section>
         <Features />
       </section>
+      <section>
+        <Gallery />
+      </section>
     </>
   );
+}
+{
 }
