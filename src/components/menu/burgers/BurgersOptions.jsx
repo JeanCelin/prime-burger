@@ -7,7 +7,7 @@ export default function BurgersOptions({ btnOrderActive, handleOrder }) {
     {
       title: "Classic Cheeseburger",
       price: 23.27,
-      src: "/burgers/cheese-burger/cheese-burger-128w.jpeg",
+      src: "/assets/burgers/cheese-burger/cheese-burger-128w.jpeg",
       width: 128,
       height: 128,
       alt: "A Cheeseburger",
@@ -17,7 +17,7 @@ export default function BurgersOptions({ btnOrderActive, handleOrder }) {
     {
       title: "Bacon BBQ",
       price: 25.98,
-      src: "/burgers/bacon-bbq/bacon-bbq-128w.jpeg",
+      src: "/assets/burgers/bacon-bbq/bacon-bbq-128w.jpeg",
       width: 128,
       height: 128,
       alt: "A burger",
@@ -27,7 +27,7 @@ export default function BurgersOptions({ btnOrderActive, handleOrder }) {
     {
       title: "Veggie Delight",
       price: 32.6,
-      src: "/burgers/veggie-delight/veggie-delight-128w.jpeg",
+      src: "/assets/burgers/veggie-delight/veggie-delight-128w.jpeg",
       width: 128,
       height: 128,
       alt: "A bacon burger",
@@ -37,7 +37,7 @@ export default function BurgersOptions({ btnOrderActive, handleOrder }) {
     {
       title: "Chicken Crispy",
       price: 24.32,
-      src: "/burgers/chicken-crispy/chicken-crispy-128w.png",
+      src: "/assets/burgers/chicken-crispy/chicken-crispy-128w.png",
       width: 128,
       height: 128,
       alt: "A chicken burger",
@@ -47,7 +47,7 @@ export default function BurgersOptions({ btnOrderActive, handleOrder }) {
     {
       title: "Lamb Burger",
       price: 28.99,
-      src: "/burgers/lamb-burger/lamb-burger-128w.jpeg",
+      src: "/assets/burgers/lamb-burger/lamb-burger-128w.jpeg",
       width: 128,
       height: 128,
       alt: "A bacon burger",
