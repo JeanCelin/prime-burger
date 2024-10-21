@@ -1,4 +1,4 @@
-.formContainer {
+.form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,22 +12,22 @@
   padding: 2rem;
   margin: auto;
 }
-.formContainer h2 {
+.form__title h2 {
   text-align: center;
 }
 
-.formGroup {
+.form__group {
   margin-bottom: 20px;
 }
 
-.label {
+.form__label {
   color: var(--theme-primary-color);
   font-weight: bold;
   margin-bottom: 8px;
   display: block;
 }
 
-.input {
+.form__input {
   padding: 12px;
   border: 2px solid #ccc;
   border-radius: 8px;
@@ -39,16 +39,16 @@
   font-size: 18px;
 }
 
-.input:focus {
+.form__input:focus {
   border-color: var(--theme-primary-color);
   outline: none;
   box-shadow: 0 0 5px rgba(225, 246, 62, 0.5);
 }
-.formButton {
+.form__btnContainer {
   display: flex;
   justify-content: center;
 }
-.isSuccess__container {
+.form__success {
   padding: 80px 2rem 0;
   display: flex;
   flex-direction: column;
@@ -56,10 +56,6 @@
   max-width: 600px;
   text-align: center;
 }
-.isSuccess__container p {
+.form__successText p {
   font-family: var(--font-secondary);
-}
-@media (max-width: 500px) {
-  .isSuccess__container {
-  }
 }

@@ -15,11 +15,11 @@ export default function Form() {
   return (
     <>
       {isSuccess === true ? (
-        <div className={styles.isSuccess__container}>
+        <div className={styles.form__success}>
           <h2>Success !</h2>
-          <p>
+          <p className={styles.form__successText}>
             Order received, please wait while we take care of everything for
-            you. Your order should arrive at your address in less than 30
+            you. Your order should arrive at your address in less than 50
             minutes.
           </p>
           <Button
@@ -29,42 +29,42 @@ export default function Form() {
         </div>
       ) : (
         <>
-          <div className={styles.formContainer}>
-            <h2>Please fill out the form.</h2>
+          <div className={styles.form}>
+            <h2 className={styles.form__title}>Please fill out the form.</h2>
             <form
               action="/submit-address"
               method="POST"
               onSubmit={handleSubmit}>
-              <div className={styles.formGroup}>
-                <label className={styles.label} htmlFor="name">
+              <div className={styles.form__group}>
+                <label className={styles.form__label} htmlFor="name">
                   Name:
                 </label>
                 <input
-                  className={styles.input}
+                  className={styles.form__input}
                   type="text"
                   id="name"
                   name="name"
                   required
                 />
               </div>
-              <div className={styles.formGroup}>
-                <label className={styles.label} htmlFor="phone">
+              <div className={styles.form__group}>
+                <label className={styles.form__label} htmlFor="phone">
                   Phone:
                 </label>
                 <input
-                  className={styles.input}
+                  className={styles.form__input}
                   type="number"
                   id="phone"
                   name="phone"
                   required
                 />
               </div>
-              <div className={styles.formGroup}>
-                <label className={styles.label} htmlFor="neighborhood">
+              <div className={styles.form__group}>
+                <label className={styles.form__label} htmlFor="neighborhood">
                   Neighborhood:
                 </label>
                 <input
-                  className={styles.input}
+                  className={styles.form__input}
                   type="text"
                   id="neighborhood"
                   name="neighborhood"
@@ -72,12 +72,12 @@ export default function Form() {
                 />
               </div>
 
-              <div className={styles.formGroup}>
-                <label className={styles.label} htmlFor="street">
+              <div className={styles.form__group}>
+                <label className={styles.form__label} htmlFor="street">
                   Street:
                 </label>
                 <input
-                  className={styles.input}
+                  className={styles.form__input}
                   type="text"
                   id="street"
                   name="street"
@@ -85,19 +85,19 @@ export default function Form() {
                 />
               </div>
 
-              <div className={styles.formGroup}>
-                <label className={styles.label} htmlFor="number">
+              <div className={styles.form__group}>
+                <label className={styles.form__label} htmlFor="number">
                   Number:
                 </label>
                 <input
-                  className={styles.input}
+                  className={styles.form__input}
                   type="number"
                   id="number"
                   name="number"
                   required
                 />
               </div>
-              <div className={styles.formButton}>
+              <div className={styles.form__btnContainer}>
                 <button className={btnStyles.buttonSecondary} type="submit">
                   Submit
                 </button>

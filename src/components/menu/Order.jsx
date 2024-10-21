@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import Image from "next/image";
-import styles from "@/styles/components/menu/order/Order.module.css";
+import styles from "@/styles/components/menu/Order.module.css";
 import btnStyles from "@/styles/components/buttons/Button.module.css";
-import Form from "../form/Form";
+import Form from "./Form";
 
 export default function Order({ burger, drink, back }) {
   const [displayOrder, setDisplayOrder] = useState(null);
@@ -53,27 +52,27 @@ export default function Order({ burger, drink, back }) {
             <Form />
           </div>
         ) : (
-          <div id={styles.order}>
-            <div className={styles.order_content}>
+          <div className={styles.order}>
+            <div className={styles.order__content}>
               <h2>Your Order</h2>
               <div className={styles.burgers}>
                 {burger.length > 0 && (
-                  <div className={styles.itens}>
+                  <div className={styles.order__itens}>
                     <h3>Burgers</h3>
                     <ul>{burgersList}</ul>
                   </div>
                 )}
               </div>
-              <div className={styles.drinks}>
+              <div>
                 {drink.length > 0 && (
-                  <div className={styles.itens}>
+                  <div className={styles.order__itens}>
                     <h3>Drinks</h3>
                     <ul>{drinksList}</ul>
                   </div>
                 )}
               </div>
-              <div className={styles.totalLine}>
-                <h3 className={styles.order__total}>Amount to pay:</h3>
+              <div className={styles.order__total}>
+                <h3 className={styles.order__totalTitle}>Amount to pay:</h3>
                 <h3>${total.toFixed(2)}</h3>
               </div>
               <div className={styles.btn_container}>

@@ -29,16 +29,17 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+
         {/* Ion Icons */}
         <Script
           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
           type="module"
-          strategy="lazyOnload" // Adia o carregamento para após o carregamento inicial
+          strategy="lazyOnload"
         />
         <Script
           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
           noModule
-          strategy="lazyOnload" // Adia o carregamento para após o carregamento inicial
+          strategy="lazyOnload"
         />
       </body>
     </Html>

@@ -3,10 +3,10 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section className={styles.aboutContainer}>
+    <section className={styles.about}>
       <h1>About US</h1>
-      <div className={styles.part1}>
-        <p className={`${styles.text1} ${styles.span}`}>
+      <div className={styles.about__part1}>
+        <p className={`${styles.about__text1} ${styles.about__span}`}>
           At <span>Prime Burger</span>, we believe that a burger goes beyond
           just a meal—it's an <span>experience</span>. With{" "}
           <span>fresh ingredients</span>, <span>selected meats</span>, and{" "}
@@ -19,17 +19,18 @@ export default function About() {
           savory meal, each bite is crafted to <span>surprise</span> and{" "}
           <span>delight</span> your palate.
         </p>
-        <div className={styles.imageContainer}>
+        <div className={styles.about__imageContainer}>
           <Image
             src="/assets/about/chef.jpg"
             layout="intrisic"
             width={600}
             height={480}
+            alt="A photo of the chef holding a cutting board with a burger on it, inside the kitchen."
           />
         </div>
       </div>
-      <div className={styles.part2}>
-        <p className={`${styles.text2} ${styles.span}`}>
+      <div className={styles.about__part2}>
+        <p className={`${styles.about__text2} ${styles.about__span}`}>
           At Prime Burger, our clientele is as <span>diverse</span> as our menu.
           From lovers of <span>classic burgers</span> seeking the perfect blend
           of flavor and tradition, to those exploring the latest{" "}
@@ -40,29 +41,31 @@ export default function About() {
           celebration. Our mission is to ensure that every bite is a{" "}
           <span>memorable experience</span>!
         </p>
-        <div className={styles.imageContainer}>
+        <div className={styles.about__imageContainer}>
           <Image
             src="/assets/about/burger-in-hands.jpg"
             layout="intrisic"
             width={720}
             height={449}
+            alt="A photo of a hamburger being held by a person with the hamburger in the center of the image"
           />
         </div>
       </div>
-      <div className={styles.part3}>
-        <p className={`${styles.text3} ${styles.span}`}>
+      <div className={styles.about__part3}>
+        <p className={`${styles.about__text3} ${styles.about__span}`}>
           Discover the true experience of <span>artisanal cuisine</span>, right
           from the comfort of your home! At Prime Burger, each burger is crafted
           with <span>care</span>, <span>fresh ingredients</span>, and a special
           touch that only <span>handmade cooking</span> can offer. Order now and
           savor this <span>unique experience</span> without leaving your house.
         </p>
-        <div className={styles.imageContainer}>
+        <div className={styles.about__imageContainer}>
           <Image
             src="/assets/about/man-showing-hamburger.jpg"
             layout="intrisic"
             width={360}
             height={480}
+            alt="A photo of a person showing a bitten hamburger"
           />
         </div>
       </div>

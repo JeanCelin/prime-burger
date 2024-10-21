@@ -6,13 +6,13 @@ export default function Card({ content }) {
 
   useEffect(() => {
     const newCards = content.map((e, index) => (
-      <div key={index} className={styles.card}>
-        <h3>{e.title}</h3>
+      <div key={index} className={styles.card__elements}>
+        <h3 className={styles.card__title}>{e.title}</h3>
         <p>{e.text}</p>
       </div>
     ));
     setCardContent(newCards);
   }, [content]);
 
-  return <div className={styles.cardContainer}>{getCardContent}</div>;
+  return <div className={styles.card}>{getCardContent}</div>;
 }

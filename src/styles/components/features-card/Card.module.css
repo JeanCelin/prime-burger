@@ -1,9 +1,9 @@
-.cardContainer {
+.card {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-.card {
+.card__elements {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -12,13 +12,12 @@
   font-family: var(--font-secondary);
   color: var(--font-color);
   line-height: 1.5rem;
-
   min-height: 20rem;
   width: 20rem;
-  background-color: rgb(49, 49, 49);
+  background-color: var(--theme-tertiary-color);
   border-radius: 5px;
 }
-.card h3 {
+.card__title {
   font-family: var(--font-primary);
   text-align: center;
 }

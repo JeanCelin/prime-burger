@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import styles from "@/styles/components/menu/drinks/DrinksOptions.module.css";
+import styles from "@/styles/components/menu/DrinkMenu.module.css";
 
-export default function DrinksOptions({ btnOrderActive, handleOrder }) {
+export default function DrinkMenu({ btnOrderActive, handleOrder }) {
   const drinkCard = [
     {
       title: "Orange Juice",
@@ -10,7 +10,7 @@ export default function DrinksOptions({ btnOrderActive, handleOrder }) {
       src: "/assets/juices/orange-juice/orange-juice-128w.jpeg",
       width: 128,
       height: 128,
-      alt: "A drink",
+      alt: "A picture of an orange juice",
       description: "Fresh oranges.",
     },
     {
@@ -19,7 +19,7 @@ export default function DrinksOptions({ btnOrderActive, handleOrder }) {
       src: "/assets/juices/pineapple-juice/pineapple-juice-128w.jpeg",
       width: 128,
       height: 128,
-      alt: "A drink",
+      alt: "A picture of an pineapple juice",
       description: "Ripe pineapple.",
     },
     {
@@ -28,7 +28,7 @@ export default function DrinksOptions({ btnOrderActive, handleOrder }) {
       src: "/assets/juices/green-juice/green-juice-128w.jpeg",
       width: 128,
       height: 128,
-      alt: "A drink",
+      alt: "A photo of a green juice made with kale, apple and lemon",
       description: "Kale, apple, lemon, water.",
     },
     {
@@ -37,7 +37,7 @@ export default function DrinksOptions({ btnOrderActive, handleOrder }) {
       src: "/assets/juices/sleeve-juice/sleeve-juice-128w.jpeg",
       width: 128,
       height: 128,
-      alt: "A drink",
+      alt: "A picture of an mango juice",
       description: "Ripe mango, water, sugar.",
     },
     {
@@ -46,7 +46,7 @@ export default function DrinksOptions({ btnOrderActive, handleOrder }) {
       src: "/assets/juices/watermelon-juice/watermelon-juice-128w.jpeg",
       width: 128,
       height: 128,
-      alt: "A drink",
+      alt: "A picture of an watermelon juice",
       description: "Watermelon, lemon.",
     },
   ];
@@ -98,22 +98,22 @@ export default function DrinksOptions({ btnOrderActive, handleOrder }) {
   }, [btnOrderActive, displayValues]);
 
   return (
-    <section id={styles.drinksOptions}>
+    <section>
       {drinkCard.map((e, index) => (
-        <div key={index} className={styles.drinksOptions_card__container}>
-          <div className={styles.drinksOptions_card__description}>
-            <div className={styles.drinksOptions_card__descriptionContainer}>
-              <div id={styles.drinksOptions_card__titlePrice}>
+        <div key={index} className={styles.drinkMenu}>
+          <div className={styles.drinkMenu__card}>
+            <div className={styles.drinkMenu__cardContainer}>
+              <div className={styles.drinksMenu__title}>
                 <h3>{e.title}</h3>
                 <h3>{`R$ ${e.price.toFixed(2)}`}</h3>
               </div>
-              <p className={styles.drinksOptions_card__description}>
-                {e.description}
-              </p>
+              <p>{e.description}</p>
             </div>
-            <div className={styles.shop}>
+            <div className={styles.drinkMenu__btns}>
               <button onClick={() => handleIncreaseClick(index)}>+</button>
-              <div className={styles.shop_display}>{displayValues[index]}</div>
+              <div className={styles.drinkMenu__display}>
+                {displayValues[index]}
+              </div>
               <button onClick={() => handleDecreaseClick(index)}>-</button>
             </div>
           </div>

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import styles from "@/styles/components/menu/burgers/BurgersOptions.module.css";
+import styles from "@/styles/components/menu/BurgerMenu.module.css";
 
-export default function BurgersOptions({ btnOrderActive, handleOrder }) {
+export default function BurgerMenu({ btnOrderActive, handleOrder }) {
   const burgerCard = [
     {
       title: "Classic Cheeseburger",
@@ -10,7 +10,7 @@ export default function BurgersOptions({ btnOrderActive, handleOrder }) {
       src: "/assets/burgers/cheese-burger/cheese-burger-128w.jpeg",
       width: 128,
       height: 128,
-      alt: "A Cheeseburger",
+      alt: "A picture of a cheeseburger",
       description:
         "bun, beef patty, cheddar cheese, lettuce, tomato, special sauce.",
     },
@@ -20,7 +20,7 @@ export default function BurgersOptions({ btnOrderActive, handleOrder }) {
       src: "/assets/burgers/bacon-bbq/bacon-bbq-128w.jpeg",
       width: 128,
       height: 128,
-      alt: "A burger",
+      alt: "A picture of a bacon burger",
       description:
         "brioche bun, beef patty, bacon, cheddar cheese, caramelized onions, barbecue sauce.",
     },
@@ -30,7 +30,7 @@ export default function BurgersOptions({ btnOrderActive, handleOrder }) {
       src: "/assets/burgers/veggie-delight/veggie-delight-128w.jpeg",
       width: 128,
       height: 128,
-      alt: "A bacon burger",
+      alt: "A picture of a vegan burger",
       description:
         "whole wheat bun, chickpea patty, avocado, lettuce, tomato, yogurt sauce.",
     },
@@ -40,7 +40,7 @@ export default function BurgersOptions({ btnOrderActive, handleOrder }) {
       src: "/assets/burgers/chicken-crispy/chicken-crispy-128w.png",
       width: 128,
       height: 128,
-      alt: "A chicken burger",
+      alt: "A picture of a chicken burger",
       description:
         "bun, breaded chicken fillet, lettuce, tomato, mayonnaise, pickles.",
     },
@@ -50,7 +50,7 @@ export default function BurgersOptions({ btnOrderActive, handleOrder }) {
       src: "/assets/burgers/lamb-burger/lamb-burger-128w.jpeg",
       width: 128,
       height: 128,
-      alt: "A bacon burger",
+      alt: "A picture of a lamb burger",
       description:
         "pita bread, lamb patty, feta cheese, tzatziki sauce, lettuce, tomato.",
     },
@@ -103,22 +103,22 @@ export default function BurgersOptions({ btnOrderActive, handleOrder }) {
   }, [btnOrderActive, displayValues]);
 
   return (
-    <section id={styles.burgersOptions}>
+    <section>
       {burgerCard.map((e, index) => (
-        <div key={index} className={styles.burgersOptions_card__container}>
-          <div className={styles.burgersOptions_card_description}>
-            <div className={styles.burgersOptions_card_descriptionContainer}>
-              <div id={styles.burgersOptions_card_titlePrice}>
+        <div key={index} className={styles.burgerMenu}>
+          <div className={styles.burgerMenu__card}>
+            <div className={styles.burgerMenu__cardContainer}>
+              <div className={styles.burgerMenu__title}>
                 <h3>{e.title}</h3>
                 <h3>{`R$ ${e.price.toFixed(2)}`}</h3>
               </div>
-              <p className={styles.burgersOptions_card_description}>
-                {e.description}
-              </p>
+              <p>{e.description}</p>
             </div>
-            <div className={styles.shop}>
+            <div className={styles.burgerMenu__btns}>
               <button onClick={() => handleIncreaseClick(index)}>+</button>
-              <div className={styles.shop_display}>{displayValues[index]}</div>
+              <div className={styles.burgerMenu__display}>
+                {displayValues[index]}
+              </div>
               <button onClick={() => handleDecreaseClick(index)}>-</button>
             </div>
           </div>

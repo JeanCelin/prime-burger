@@ -23,7 +23,7 @@ export default function NavBar({ itens, logoConfig }) {
           <Link
             onClick={handleItemClick}
             key={index}
-            className={styles.navbar_links}
+            className={styles.navbar__links}
             href={e.address}>
             <li className={styles.navbar__itens} key={index}>
               {e.label}
@@ -42,9 +42,9 @@ export default function NavBar({ itens, logoConfig }) {
   };
   return (
     <div id={styles.navbar}>
-      <div className={styles.navbar_content}>
-        <Link className={styles.navbar_logoLink} href={"/"}>
-          <div className={styles.navbar_business__container}>
+      <div className={styles.navbar__content}>
+        <Link className={styles.navbar__logoLink} href={"/"}>
+          <div className={styles.navbar__businessContainer}>
             <Image
               src={logoConfig[0].src}
               width={logoConfig[0].width}
@@ -52,14 +52,14 @@ export default function NavBar({ itens, logoConfig }) {
               alt={logoConfig[0].alt}
               priority
             />
-            <h4 className={styles.navbar_business__name}>
+            <h4 className={styles.navbar__businessName}>
               {logoConfig[0].title}
             </h4>
           </div>
         </Link>
         {widthScreen > 600 ? (
           <>
-            <ul className={styles.navbar_largeScreenItens}>{navItens}</ul>
+            <ul className={styles.navbar__largeScreenItens}>{navItens}</ul>
           </>
         ) : (
           <>
@@ -74,7 +74,7 @@ export default function NavBar({ itens, logoConfig }) {
           </>
         )}
         {openMenu && widthScreen <= 600 && (
-          <ul className={styles.navbar_openMenu}>{navItens}</ul>
+          <ul className={styles.navbar__openMenu}>{navItens}</ul>
         )}
       </div>
     </div>

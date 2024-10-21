@@ -1,9 +1,9 @@
-#home {
+.home {
   position: relative;
   height: 100vh;
   color: var(--font-color);
 }
-#home_background {
+.home__background {
   background-image: url("/bg-burger.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -14,7 +14,7 @@
   z-index: -1;
   position: absolute;
 }
-.home_content {
+.home__content {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -25,6 +25,6 @@
   height: 100%;
   font-family: var(--font-secondary);
 }
-.home_content h1 {
+.home_title {
   font-family: var(--font-primary);
 }

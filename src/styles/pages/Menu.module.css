@@ -1,4 +1,4 @@
-#menu {
+.menu {
   min-height: 100vh;
   background-size: cover;
   background-image: url("/background.jpg");
@@ -11,7 +11,7 @@
   padding-bottom: 1rem;
 }
 
-.menu_content {
+.menu__content {
   max-width: 1000px;
   min-height: 100%;
   display: flex;
@@ -31,8 +31,8 @@
   gap: 2rem;
 }
 
-@media (max-width: 650px) {
-  .menu_content {
+@media (max-width: 655px) {
+  .menu__content {
     background-image: none;
   }
 }

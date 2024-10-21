@@ -3,7 +3,7 @@ import Card from "./Card";
 
 export default function FeaturesCard() {
   return (
-    <div className={styles.featuresContainer}>
+    <div className={styles.features}>
       <Card
         content={[
           {

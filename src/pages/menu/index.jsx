@@ -1,9 +1,9 @@
-import BurgersOptions from "@/components/menu/burgers/BurgersOptions";
-import DrinksOptions from "@/components/menu/drinks/DrinksOptions";
+import BurgerMenu from "@/components/menu/BurgerMenu";
+import DrinkMenu from "@/components/menu/DrinkMenu";
 import styles from "@/styles/pages/Menu.module.css";
 import btnStyles from "@/styles/components/buttons/Button.module.css";
 import { useEffect, useState } from "react";
-import Order from "../../components/menu/order";
+import Order from "@/components/menu/Order";
 
 export default function Menu() {
   const [btnOrderActive, setBtnOrderActive] = useState(false);
@@ -25,6 +25,9 @@ export default function Menu() {
   useEffect(() => {
     if (getOrderBurgerData.length > 0) {
       setShowOrder(true);
+      window.scrollTo({
+        top: 0,
+      });
     } else {
       setErrSelected(true);
     }
@@ -32,9 +35,9 @@ export default function Menu() {
   }, [getOrderBurgerData, getOrderDrinkData, btnOrderActive]);
 
   return (
-    <div id={styles.menu}>
+    <div className={styles.menu}>
       {showOrder ? (
-        <div className={styles.menu_order}>
+        <div>
           <Order
             burger={getOrderBurgerData}
             drink={getOrderDrinkData}
@@ -42,14 +45,14 @@ export default function Menu() {
           />
         </div>
       ) : (
-        <div className={styles.menu_content}>
+        <div className={styles.menu__content}>
           <h1>Burgers</h1>
-          <BurgersOptions
+          <BurgerMenu
             handleOrder={handleBurgerOrder}
             btnOrderActive={btnOrderActive}
           />
           <h1>Drinks</h1>
-          <DrinksOptions
+          <DrinkMenu
             btnOrderActive={btnOrderActive}
             handleOrder={handleDrinkOrder}
           />
