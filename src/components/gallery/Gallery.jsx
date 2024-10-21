@@ -1,5 +1,5 @@
 import styles from "@/styles/components/gallery/Gallery.module.css";
-import Image from "next/image";
+import Image from "next/legacy/image";
 export default function Gallery() {
   return (
     <div className={styles.gallery}>
@@ -8,7 +8,7 @@ export default function Gallery() {
         <div className={styles.gallery__photoCard}>
           <Image
             src="/assets/burgers/bacon-bbq/bacon-bbq-360w.jpeg"
-            layout="intrisic"
+            intrinsic
             width={360}
             height={360}
             alt="A picture of a bacon burger"
@@ -18,7 +18,7 @@ export default function Gallery() {
         <div className={styles.gallery__photoCard}>
           <Image
             src="/assets/burgers/cheese-burger/cheese-burger-360w.jpeg"
-            layout="intrisic"
+            intrinsic
             width={360}
             height={360}
             alt="A picture of a cheeseburger"
@@ -29,7 +29,7 @@ export default function Gallery() {
         <div className={styles.gallery__photoCard}>
           <Image
             src="/assets/burgers/chicken-crispy/chicken-crispy-360w.png"
-            layout="intrisic"
+            intrinsic
             width={360}
             height={360}
             alt="A picture of a chicken burger"
@@ -40,7 +40,7 @@ export default function Gallery() {
         <div className={styles.gallery__photoCard}>
           <Image
             src="/assets/burgers/lamb-burger/lamb-burger-360w.jpeg"
-            layout="intrisic"
+            intrinsic
             width={360}
             height={360}
             alt="A picture of a lamb burger"
@@ -51,7 +51,7 @@ export default function Gallery() {
         <div className={styles.gallery__photoCard}>
           <Image
             src="/assets/burgers/veggie-delight/veggie-delight-360w.jpeg"
-            layout="intrisic"
+            intrinsic
             width={360}
             height={360}
             alt="A picture of a vegan burger"
@@ -62,7 +62,7 @@ export default function Gallery() {
         <div className={styles.gallery__photoCard}>
           <Image
             src="/assets/burgers/simple-burger/simple-burger-360w.jpeg"
-            layout="intrisic"
+            intrinsic
             width={360}
             height={360}
             alt="The image of a hamburger and fries"

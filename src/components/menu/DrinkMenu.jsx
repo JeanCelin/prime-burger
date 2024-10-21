@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "@/styles/components/menu/DrinkMenu.module.css";
 
 export default function DrinkMenu({ btnOrderActive, handleOrder }) {

@@ -1,5 +1,5 @@
 import styles from "@/styles/pages/About.module.css";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export default function About() {
   return (
@@ -22,7 +22,7 @@ export default function About() {
         <div className={styles.about__imageContainer}>
           <Image
             src="/assets/about/chef.jpg"
-            layout="intrisic"
+            intrinsic
             width={600}
             height={480}
             alt="A photo of the chef holding a cutting board with a burger on it, inside the kitchen."
@@ -44,7 +44,7 @@ export default function About() {
         <div className={styles.about__imageContainer}>
           <Image
             src="/assets/about/burger-in-hands.jpg"
-            layout="intrisic"
+            intrinsic
             width={720}
             height={449}
             alt="A photo of a hamburger being held by a person with the hamburger in the center of the image"
@@ -62,7 +62,6 @@ export default function About() {
         <div className={styles.about__imageContainer}>
           <Image
             src="/assets/about/man-showing-hamburger.jpg"
-            layout="intrisic"
             width={360}
             height={480}
             alt="A photo of a person showing a bitten hamburger"

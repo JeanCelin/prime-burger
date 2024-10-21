@@ -64,15 +64,14 @@
 .about__imageContainer {
   border: 2px solid var(--theme-primary-color);
   border-radius: 5px;
-  width: 500px;
-  max-width: 100%;
+
+  max-width: 500px;
   height: auto;
 }
 
-.about__imageContainer img {
+/* .about__imageContainer img {
   width: 100%;
   height: auto; /* Faz com que a imagem se redimensione corretamente */
-}
 
 @media (max-width: 1080px) {
   .about__part1 {
