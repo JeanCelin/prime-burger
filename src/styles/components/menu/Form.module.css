@@ -12,7 +12,7 @@
   padding: 2rem;
   margin: auto;
 }
-.form__title h2 {
+.form__title {
   text-align: center;
 }
 
@@ -56,6 +56,6 @@
   max-width: 600px;
   text-align: center;
 }
-.form__successText p {
+.form__successText {
   font-family: var(--font-secondary);
 }

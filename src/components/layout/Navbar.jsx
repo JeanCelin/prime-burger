@@ -52,9 +52,7 @@ export default function NavBar({ itens, logoConfig }) {
               alt={logoConfig[0].alt}
               priority
             />
-            <h4 className={styles.navbar__businessName}>
-              {logoConfig[0].title}
-            </h4>
+            <p className={styles.navbar__businessName}>{logoConfig[0].title}</p>
           </div>
         </Link>
         {widthScreen > 600 ? (

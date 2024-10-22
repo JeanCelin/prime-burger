@@ -1,8 +1,9 @@
+import { useEffect, useState } from "react";
+import Head from "next/head";
 import BurgerMenu from "@/components/menu/BurgerMenu";
 import DrinkMenu from "@/components/menu/DrinkMenu";
 import styles from "@/styles/pages/Menu.module.css";
 import btnStyles from "@/styles/components/buttons/Button.module.css";
-import { useEffect, useState } from "react";
 import Order from "@/components/menu/Order";
 
 export default function Menu() {
@@ -35,33 +36,42 @@ export default function Menu() {
   }, [getOrderBurgerData, getOrderDrinkData, btnOrderActive]);
 
   return (
-    <div className={styles.menu}>
-      {showOrder ? (
-        <div>
-          <Order
-            burger={getOrderBurgerData}
-            drink={getOrderDrinkData}
-            back={setShowOrder}
-          />
-        </div>
-      ) : (
-        <div className={styles.menu__content}>
-          <h1>Burgers</h1>
-          <BurgerMenu
-            handleOrder={handleBurgerOrder}
-            btnOrderActive={btnOrderActive}
-          />
-          <h1>Drinks</h1>
-          <DrinkMenu
-            btnOrderActive={btnOrderActive}
-            handleOrder={handleDrinkOrder}
-          />
-          {errSelected && <p>* Select at least one burger</p>}
-          <button className={btnStyles.buttonSecondary} onClick={handleClick}>
-            ORDER
-          </button>
-        </div>
-      )}
-    </div>
+    <>
+      <Head>
+        <title>Menu</title>
+        <meta
+          name="description"
+          content="Explore the Prime Burger menu! Indulge in a variety of handcrafted burgers and refreshing drinks. Easily place your order and enjoy a flavorful experience without leaving home!"
+        />
+      </Head>
+      <div className={styles.menu}>
+        {showOrder ? (
+          <div>
+            <Order
+              burger={getOrderBurgerData}
+              drink={getOrderDrinkData}
+              back={setShowOrder}
+            />
+          </div>
+        ) : (
+          <div className={styles.menu__content}>
+            <h2 className={styles.menu__contentTitle}>Burgers</h2>
+            <BurgerMenu
+              handleOrder={handleBurgerOrder}
+              btnOrderActive={btnOrderActive}
+            />
+            <h2 className={styles.menu__contentTitle}>Drinks</h2>
+            <DrinkMenu
+              btnOrderActive={btnOrderActive}
+              handleOrder={handleDrinkOrder}
+            />
+            {errSelected && <p>* Select at least one burger</p>}
+            <button className={btnStyles.buttonSecondary} onClick={handleClick}>
+              ORDER
+            </button>
+          </div>
+        )}
+      </div>
+    </>
   );
 }

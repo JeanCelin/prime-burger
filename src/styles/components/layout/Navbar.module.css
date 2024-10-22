@@ -21,6 +21,7 @@
 }
 .navbar__businessName {
   color: rgb(249, 148, 7);
+  font-weight: bold;
 }
 .navbar__largeScreenItens {
   display: flex;
