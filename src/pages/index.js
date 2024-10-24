@@ -3,6 +3,7 @@ import Button from "@/components/buttons/Button";
 import Features from "@/components/features-card/Features";
 import Gallery from "@/components/gallery/Gallery";
 import styles from "@/styles/pages/Home.module.css";
+import Card from "@/components/features-card/Card";
 
 export default function Home() {
   return (
@@ -26,11 +27,12 @@ export default function Home() {
         </div>
       </main>
       <section>
-        <Features />
-      </section>
-      <section>
         <Gallery />
       </section>
+      <section>
+        <Features />
+      </section>
+      <section></section>
     </>
   );
 }

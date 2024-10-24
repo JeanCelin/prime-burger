@@ -1,6 +1,6 @@
 .gallery {
-  background-color: var(--theme-secondary-color);
-  padding: 1rem;
+  background-color: var(--theme-tertiary-color);
+  padding: 2rem 0;
 }
 .gallery__title {
   font-family: var(--font-secondary);
@@ -14,7 +14,7 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
-  padding: 2rem 0;
+  padding: 2rem 12%;
 }
 
 .gallery__photoCard {
@@ -37,7 +37,12 @@
   font-weight: bold;
   font-size: 18px;
 }
-
+.gallery__slider {
+  background-color: var(--theme-secondary-color);
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem;
+}
 @media (max-width: 480px) {
   .gallery__photoCard {
     width: 240px;

@@ -30,8 +30,9 @@ export default function About() {
           </p>
           <div className={styles.about__imageContainer}>
             <Image
+              priority
               src="/assets/about/chef.jpg"
-              intrinsic
+              intrinsic="true"
               width={600}
               height={480}
               alt="A photo of the chef holding a cutting board with a burger on it, inside the kitchen."
@@ -53,7 +54,7 @@ export default function About() {
           <div className={styles.about__imageContainer}>
             <Image
               src="/assets/about/burger-in-hands.jpg"
-              intrinsic
+              intrinsic="true"
               width={720}
               height={449}
               alt="A photo of a hamburger being held by a person with the hamburger in the center of the image"

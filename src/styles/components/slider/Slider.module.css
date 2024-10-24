@@ -1,0 +1,11 @@
+.slider__container {
+  text-align: center;
+  width: 100%;
+  max-width: 420px;
+  border: 3px solid var(--theme-primary-color);
+}
+
+.slider__slide {
+  width: 100%;
+  height: auto;
+}
