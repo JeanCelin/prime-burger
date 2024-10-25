@@ -6,7 +6,7 @@
   gap: 1rem;
 
   border-radius: 12px;
-  background-color: var(--theme-secondary-color);
+  background-color: var(--theme-darkgray-color);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   max-width: 400px;
   padding: 2rem;
@@ -32,17 +32,15 @@
   border: 2px solid #ccc;
   border-radius: 8px;
   font-size: 16px;
-  background-color: #fff;
+  background-color: var(--theme-white-color);
   color: #333;
   transition: border 0.3s;
-
   font-size: 18px;
 }
 
 .form__input:focus {
   border-color: var(--theme-primary-color);
   outline: none;
-  box-shadow: 0 0 5px rgba(225, 246, 62, 0.5);
 }
 .form__btnContainer {
   display: flex;

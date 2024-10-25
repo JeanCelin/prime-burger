@@ -1,5 +1,5 @@
 .gallery {
-  background-color: var(--theme-tertiary-color);
+  background-color: var(--theme-black-color);
   padding: 2rem 0;
 }
 .gallery__title {
@@ -8,7 +8,7 @@
   padding-bottom: 1rem 2rem;
 }
 .gallery__elements {
-  background-color: var(--theme-tertiary-color);
+  background-color: var(--theme-black-color);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

@@ -1,7 +1,7 @@
 .footer {
-  background-color: var(--theme-secondary-color);
+  background-color: var(--theme-black-color);
   font-family: var(--font-secondary);
-  color: #f4f4f4;
+  color: var(--theme-white-color);
   padding: 20px 0;
   text-align: center;
 
@@ -31,15 +31,15 @@
   gap: 0.6rem;
 }
 .footer__link {
-  color: white;
+  color: var(--theme-white-color);
 }
 .footer__link:hover {
-  color: var(--theme-primary-color);
+  color: var(--theme-secondary-color);
 }
 .footer__socialsIcons li {
   display: flex;
   text-decoration: none;
-  color: white;
+  color: var(--theme-white-color);
   font-size: 24px;
 }
 

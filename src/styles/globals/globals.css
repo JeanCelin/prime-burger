@@ -1,17 +1,22 @@
 :root {
   /* THEMES */
-  --theme-primary-color: rgb(249, 148, 7);
+  --theme-primary-color: #bf4904;
+  --theme-secondary-color: #f2dfbb;
+  --theme-tertiary-color: #f28705;
+  --theme-white-color: white;
+  --theme-black-color: black;
+  --theme-darkgray-color: rgb(22, 22, 22);
+  --theme-backtransparent-color: rgba(0, 0, 0, 0.668);
   --font-color: #e3e3e3;
-  --theme-secondary-color: rgb(22, 22, 22);
-  --theme-tertiary-color: rgb(49, 49, 49);
   /* BUTTONS */
 
   /* Navbar Buttons   */
-  --button-background: rgba(0, 0, 0, 0.668);
-  --button-color: #fff;
+  --button-background: var(--theme-backtransparent-color);
+  --button-color: #f2dfbb;
+
   /* Hover */
-  --button-hover-background: #000;
-  --button-hover-color: rgb(249, 148, 7);
+  --button-hover-background: #bf4904;
+  --button-hover-color: #f2dfbb;
 
   /* Button Secondary*/
 
@@ -35,7 +40,7 @@
   font-style: normal; */
 }
 h1 {
-  color: var(--theme-primary-color);
+  color: var(--theme-tertiary-color);
   font-size: 2.25rem;
   line-height: 2.5rem;
   font-weight: bold;

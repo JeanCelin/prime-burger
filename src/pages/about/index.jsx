@@ -72,6 +72,7 @@ export default function About() {
           </p>
           <div className={styles.about__imageContainer}>
             <Image
+              intrinsic="true"
               src="/assets/about/man-showing-hamburger.jpg"
               width={360}
               height={480}
