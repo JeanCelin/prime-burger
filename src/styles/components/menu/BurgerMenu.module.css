@@ -27,6 +27,11 @@
   justify-content: space-between;
 }
 
+.burgerMenu__imageContainer {
+  box-shadow: 1px 3px 7px 1px #00000082;
+  display: flex;
+}
+
 .burgerMenu__btns {
   display: flex;
   flex-direction: column;
@@ -76,6 +81,9 @@
   }
   .burgerMenu__title {
     flex-direction: column;
+    text-align: center;
+  }
+  .burgerMenu__cardContainer > p {
     text-align: center;
   }
 }

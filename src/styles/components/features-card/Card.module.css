@@ -16,6 +16,7 @@
   width: 20rem;
   background-color: var(--theme-black-color);
   border-radius: 5px;
+  box-shadow: 3px 3px 11px 3px #00000075;
 }
 .card__title {
   font-family: var(--font-primary);

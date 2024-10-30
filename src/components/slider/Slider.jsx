@@ -16,7 +16,7 @@ export default function Slider({ burgers }) {
         spaceBetween={50}
         slidesPerView={1}
         pagination={{ clickable: true }}
-        autoplay={{ delay: 3000 }}>
+        autoplay={{ delay: 2000 }}>
         {burgers.map((element, index) => {
           return (
             <SwiperSlide key={index}>

@@ -13,7 +13,7 @@ export default function About() {
         />
       </Head>
       <section className={styles.about}>
-        <h1>About US</h1>
+        <h1 className={styles.about__title}>About US</h1>
         <div className={styles.about__part1}>
           <p className={`${styles.about__text1} ${styles.about__span}`}>
             At <span>Prime Burger</span>, we believe that a burger goes beyond

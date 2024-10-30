@@ -117,7 +117,9 @@ export default function DrinkMenu({ btnOrderActive, handleOrder }) {
               <button onClick={() => handleDecreaseClick(index)}>-</button>
             </div>
           </div>
-          <Image src={e.src} width={e.width} height={e.height} alt={e.alt} />
+          <div className={styles.drinkMenu__imageContainer}>
+            <Image src={e.src} width={e.width} height={e.height} alt={e.alt} />
+          </div>
         </div>
       ))}
     </section>

@@ -122,7 +122,9 @@ export default function BurgerMenu({ btnOrderActive, handleOrder }) {
               <button onClick={() => handleDecreaseClick(index)}>-</button>
             </div>
           </div>
-          <Image src={e.src} width={e.width} height={e.height} alt={e.alt} />
+          <div className={styles.burgerMenu__imageContainer}>
+            <Image src={e.src} width={e.width} height={e.height} alt={e.alt} />
+          </div>
         </div>
       ))}
     </section>

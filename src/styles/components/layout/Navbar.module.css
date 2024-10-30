@@ -14,14 +14,17 @@
 }
 .navbar__itens {
   color: var(--font-color);
+  padding: 2px;
   text-align: center;
+  border: 1px solid transparent;
+  transition: border-color 0.6s ease;
 }
 .navbar__itens:hover {
   color: var(--primary-color);
-  border-bottom: 1px solid #f28705;
+  border-bottom: 1px solid var(--theme-tertiary-color);
 }
 .navbar__businessName {
-  color: #f28705;
+  color: var(--theme-tertiary-color);
   font-weight: bold;
 }
 .navbar__largeScreenItens {
@@ -38,7 +41,7 @@
 }
 .navbar__links:hover {
   cursor: pointer;
-  color: rgb(249, 148, 7);
+  color: var(--theme-tertiary-color);
 }
 .navbar__logoLink {
   text-decoration: none;
@@ -55,7 +58,7 @@
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: black;
+  background-color: var(--theme-black-color);
   display: flex;
   flex-direction: column;
   align-items: center;

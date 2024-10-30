@@ -62,6 +62,10 @@
 .drinkMenu__display {
   font-size: 1.2rem;
 }
+.drinkMenu__imageContainer {
+  box-shadow: 1px 3px 7px 1px #00000082;
+  display: flex;
+}
 
 @media (max-width: 640px) {
   .drinkMenu {

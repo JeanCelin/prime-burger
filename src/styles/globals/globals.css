@@ -27,6 +27,7 @@
   --buttonOrder-hover-background: var(--theme-primary-color);
   --buttonOrder-hover-color: #000;
 
+  /* Fonts */
   --font-primary: "Special Elite", system-ui;
   --font-secondary: "Roboto", sans-serif;
 }

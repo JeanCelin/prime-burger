@@ -41,7 +41,7 @@ export default function NavBar({ itens, logoConfig }) {
     setOpenMenu(false);
   };
   return (
-    <div id={styles.navbar}>
+    <nav id={styles.navbar}>
       <div className={styles.navbar__content}>
         <Link className={styles.navbar__logoLink} href={"/"}>
           <div className={styles.navbar__businessContainer}>
@@ -75,6 +75,6 @@ export default function NavBar({ itens, logoConfig }) {
           <ul className={styles.navbar__openMenu}>{navItens}</ul>
         )}
       </div>
-    </div>
+    </nav>
   );
 }
