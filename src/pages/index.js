@@ -3,7 +3,7 @@ import Button from "@/components/buttons/Button";
 import Features from "@/components/features-card/Features";
 import Gallery from "@/components/gallery/Gallery";
 import styles from "@/styles/pages/Home.module.css";
-import Card from "@/components/features-card/Card";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -16,7 +16,15 @@ export default function Home() {
         />
       </Head>
       <main className={styles.home}>
-        <div className={styles.home__background}></div>
+        <div className={styles.home__background}>
+          <Image
+            src="/bg-burger.jpeg"
+            alt="Background of burgers"
+            layout="fill"
+            objectFit="cover"
+            priority
+          />
+        </div>
         <div className={styles.home__content}>
           <h1 className={styles.home__title}>PRIME BURGER</h1>
           <p className={styles.home__description}>
@@ -32,9 +40,6 @@ export default function Home() {
       <section>
         <Features />
       </section>
-      <section></section>
     </>
   );
-}
-{
 }

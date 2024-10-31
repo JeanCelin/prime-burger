@@ -1,7 +1,7 @@
 .menu {
   min-height: 100vh;
   background-size: cover;
-  background-image: url("/background.jpg");
+  background-image: url("/background.webp");
   display: flex;
   justify-content: center;
   font-family: var(--font-primary);
@@ -23,7 +23,7 @@
   padding: 2rem;
   background-color: var(--theme-darkgray-color);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  background-image: url("/logo-prime-burger-780x770.png");
+  background-image: url("/logo-prime-burger-780x770.webp");
   background-repeat: no-repeat;
   background-position: 3rem 20px;
   background-size: 140px;

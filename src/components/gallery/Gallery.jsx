@@ -51,7 +51,7 @@ export default function Gallery() {
   }, []);
   return (
     <div className={styles.gallery}>
-      <h1 className={styles.gallery__title}>Gallery</h1>
+      <h2 className={styles.gallery__title}>Gallery</h2>
       {screenWidth > 970 ? (
         <div className={styles.gallery__elements}>
           {burgers.map((element, index) => {

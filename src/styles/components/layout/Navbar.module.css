@@ -12,14 +12,14 @@
   font-family: var(--font-primary);
   font-size: 1.1rem;
 }
-.navbar__itens {
+.navbar__itens a {
   color: var(--theme-tertiary-color);
   padding: 2px;
   text-align: center;
   border: 1px solid transparent;
   transition: border-color 0.6s ease;
 }
-.navbar__itens:hover {
+.navbar__itens a:hover {
   color: var(--theme-secondary-color);
   border-bottom: 1px solid var(--theme-secondary-color);
 }

@@ -20,15 +20,15 @@ export default function NavBar({ itens, logoConfig }) {
     setNavItens(
       itens.map((e, index) => {
         return (
-          <Link
-            onClick={handleItemClick}
-            key={index}
-            className={styles.navbar__links}
-            href={e.address}>
-            <li className={styles.navbar__itens} key={index}>
+          <li className={styles.navbar__itens} key={index}>
+            <Link
+              onClick={handleItemClick}
+              key={index}
+              className={styles.navbar__links}
+              href={e.address}>
               {e.label}
-            </li>
-          </Link>
+            </Link>
+          </li>
         );
       })
     );

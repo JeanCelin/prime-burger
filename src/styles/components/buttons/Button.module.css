@@ -8,8 +8,10 @@
   background-color: var(--button-background);
   transition: transform 0.3s ease, background-color 0.3s ease,
     box-shadow 0.3s ease;
-  margin: 2px;
+  margin: 10px;
   box-shadow: 1px 3px 3px 1px rgb(0 0 0 / 31%);
+  min-width: 48px;
+  min-height: 48px;
 }
 .buttonPrimary:hover {
   color: var(--button-hover-color);

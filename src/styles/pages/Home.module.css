@@ -4,10 +4,6 @@
   color: var(--font-color);
 }
 .home__background {
-  background-image: url("/bg-burger.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   filter: brightness(35%);
   height: 100%;
   width: 100%;

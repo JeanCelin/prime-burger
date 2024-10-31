@@ -22,27 +22,30 @@ export default function Footer() {
         <div className={styles.footer__socialItens}>
           <h3>SOCIAL</h3>
           <ul className={styles.footer__socialsIcons}>
-            <li>
+            <li title="Instagram">
               <Link
                 className={styles.footer__link}
                 target="_blank"
-                href="https://www.instagram.com/jeancelin_/?igsh=MTRvZjc4OXp6dWNyZQ%3D%3D">
+                href="https://www.instagram.com/jeancelin_/?igsh=MTRvZjc4OXp6dWNyZQ%3D%3D"
+                aria-label="Instagram - Jean Celin">
                 <ion-icon name="logo-instagram"></ion-icon>
               </Link>
             </li>
-            <li>
+            <li title="Linkedin">
               <Link
                 className={styles.footer__link}
                 target="_blank"
-                href="https://www.linkedin.com/in/jean-celin/">
+                href="https://www.linkedin.com/in/jean-celin/"
+                aria-label="LinkedIn - Jean Celin">
                 <ion-icon name="logo-linkedin"></ion-icon>
               </Link>
             </li>
-            <li>
+            <li title="GitHub">
               <Link
                 className={styles.footer__link}
                 target="_blank"
-                href="https://github.com/JeanCelin">
+                href="https://github.com/JeanCelin"
+                aria-label="GitHub - Jean Celin">
                 <ion-icon name="logo-github"></ion-icon>
               </Link>
             </li>
