@@ -13,18 +13,19 @@
   font-size: 1.1rem;
 }
 .navbar__itens a {
-  color: var(--theme-tertiary-color);
+  color: var(--theme-primary-color);
   padding: 2px;
   text-align: center;
   border: 1px solid transparent;
   transition: border-color 0.6s ease;
+
 }
 .navbar__itens a:hover {
   color: var(--theme-secondary-color);
   border-bottom: 1px solid var(--theme-secondary-color);
 }
 .navbar__businessName {
-  color: var(--theme-tertiary-color);
+  color: var(--theme-primary-color);
   font-weight: bold;
 }
 .navbar__largeScreenItens {

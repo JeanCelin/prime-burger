@@ -12,8 +12,10 @@ export default function ButtonSec({ address, label, acTarget, btnStyle }) {
   }
 
   return (
-    <Link href={address} target={activeBlank}>
-      <button className={`${styles[btnStyle]}`}>{label}</button>
-    </Link>
+    <>
+      <Link href={address} target={activeBlank}>
+        <button className={`${styles[btnStyle]}`}>{label}</button>
+      </Link>
+    </>
   );
 }

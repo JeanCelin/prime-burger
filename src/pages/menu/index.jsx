@@ -66,7 +66,7 @@ export default function Menu() {
               handleOrder={handleDrinkOrder}
             />
             {errSelected && <p>* Select at least one burger</p>}
-            <button className={btnStyles.buttonSecondary} onClick={handleClick}>
+            <button className={btnStyles.buttonPrimary} onClick={handleClick}>
               ORDER
             </button>
           </div>

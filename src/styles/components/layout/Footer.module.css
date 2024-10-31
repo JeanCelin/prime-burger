@@ -14,13 +14,12 @@
   flex-direction: column;
   align-items: flex-start;
 }
+.footer__name {
+  color: var(--theme-primary-color);
+  text-transform: uppercase;
+}
 
 .footer__meContact {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.footer__meIcons {
   display: flex;
   padding: 0.5rem 0.5rem 0.5rem 0;
   gap: 0.4rem;

@@ -10,13 +10,13 @@
   justify-content: center;
   align-items: center;
   gap: 5rem;
-  border-bottom: 5px solid var(--theme-tertiary-color);
+  border-bottom: 5px solid var(--theme-primary-color);
   text-align: justify;
 }
 
 .about__title {
   text-transform: uppercase;
-  border-bottom: 5px solid var(--theme-tertiary-color);
+  border-bottom: 5px solid var(--theme-primary-color);
   text-align: center;
 }
 

@@ -1,8 +1,8 @@
 :root {
   /* THEMES */
-  --theme-primary-color: #bf4904;
+  --theme-primary-color: #f28705;
   --theme-secondary-color: #f2dfbb;
-  --theme-tertiary-color: #f28705;
+  --theme-tertiary-color: #4b1c01;
   --theme-white-color: white;
   --theme-black-color: black;
   --theme-darkgray-color: rgb(22, 22, 22);
@@ -14,18 +14,9 @@
   --button-background: var(--theme-backtransparent-color);
   --button-color: #f2dfbb;
 
-  /* Hover */
+  /* Navbar Buttons Hover */
   --button-hover-background: #bf4904;
   --button-hover-color: #f2dfbb;
-
-  /* Button Secondary*/
-
-  --buttonOrder-background: var(--theme-primary-color);
-  --buttonOrder-color: rgb(0, 0, 0);
-
-  /* Hover */
-  --buttonOrder-hover-background: var(--theme-primary-color);
-  --buttonOrder-hover-color: #000;
 
   /* Fonts */
   --font-primary: "Special Elite", system-ui;
@@ -36,12 +27,11 @@
   padding: 0;
   box-sizing: border-box;
 
-  /* font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-style: normal; */
+  font-style: normal;
 }
 h1 {
-  color: var(--theme-tertiary-color);
+  color: var(--theme-primary-color);
   font-size: 2.25rem;
   line-height: 2.5rem;
   font-weight: bold;
@@ -49,7 +39,6 @@ h1 {
 h2 {
   color: var(--theme-primary-color);
   text-transform: uppercase;
-  font-weight: bold;
 }
 h3 {
   color: var(--theme-primary-color);

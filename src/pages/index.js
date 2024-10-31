@@ -15,7 +15,7 @@ export default function Home() {
           content="Prime Burger - Delicious burgers made with fresh, quality ingredients. Enjoy our fast and tasty delivery service right to your door!"
         />
       </Head>
-      <main className={styles.home}>
+      <section className={styles.home}>
         <div className={styles.home__background}>
           <Image
             className={styles.home__backgroundImage}
@@ -33,7 +33,7 @@ export default function Home() {
           </p>
           <Button address="/menu" label="See menu" btnStyle="buttonPrimary" />
         </div>
-      </main>
+      </section>
       <section>
         <Gallery />
       </section>

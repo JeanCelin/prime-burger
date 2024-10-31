@@ -6,13 +6,13 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__me}>
-        <h3>Jean Celin</h3>
-        <div className={styles.footer__meContact}>
-          <div className={styles.footer__meIcons}>
+        <p className={styles.footer__name}>Jean Celin</p>
+        <div className={styles.footer__meContactContainer}>
+          <div className={styles.footer__meContact}>
             <ion-icon name="logo-whatsapp"></ion-icon>
             <p>WhatsApp: +55 (28) 99922-8065</p>
           </div>
-          <div className={styles.footer__meIcons}>
+          <div className={styles.footer__meContact}>
             <ion-icon name="mail-outline"></ion-icon>
             <p> jeancelin.contact@gmail.com</p>
           </div>
