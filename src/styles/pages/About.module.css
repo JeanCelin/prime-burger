@@ -1,6 +1,7 @@
 .about {
   font-family: var(--font-secondary);
-  background-color: var(--theme-white-color);
+  color: var(--font-color);
+  background-color: var(--theme-darkgray-color);
 
   padding: 100px 2rem 5rem;
   min-height: 100vh;
@@ -9,13 +10,13 @@
   justify-content: center;
   align-items: center;
   gap: 5rem;
-  border-bottom: 5px solid var(--theme-primary-color);
+  border-bottom: 5px solid var(--theme-tertiary-color);
   text-align: justify;
 }
 
 .about__title {
   text-transform: uppercase;
-  border-bottom: 5px solid var(--theme-secondary-color);
+  border-bottom: 5px solid var(--theme-tertiary-color);
   text-align: center;
 }
 

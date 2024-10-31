@@ -17,7 +17,7 @@ export default function About() {
         <div className={styles.about__part1}>
           <p className={`${styles.about__text1} ${styles.about__span}`}>
             At <span>Prime Burger</span>, we believe that a burger goes beyond
-            just a meal—it's an <span>experience</span>. With{" "}
+            just a meal—it&apos;s an <span>experience</span>. With{" "}
             <span>fresh ingredients</span>, <span>selected meats</span>, and{" "}
             <span>exclusive recipes</span>, we combine{" "}
             <span>authentic flavor</span> with <span>speed</span> and{" "}

@@ -92,7 +92,7 @@ export default function Order({ burger, drink, back }) {
         )
       );
     }
-  }, [burger, drink, getForm]);
+  }, [burger, drink, getForm, back]);
 
   return <>{displayOrder}</>;
 }
