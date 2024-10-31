@@ -10,6 +10,9 @@
   z-index: -1;
   position: absolute;
 }
+.home__backgroundImage {
+  object-fit: cover;
+}
 .home__content {
   text-align: center;
   display: flex;

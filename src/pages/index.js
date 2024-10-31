@@ -18,10 +18,10 @@ export default function Home() {
       <main className={styles.home}>
         <div className={styles.home__background}>
           <Image
+            className={styles.home__backgroundImage}
             src="/bg-burger.jpeg"
             alt="Background of burgers"
-            layout="fill"
-            objectFit="cover"
+            fill
             priority
           />
         </div>

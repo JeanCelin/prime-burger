@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }) {
         logoConfig={[
           {
             title: "PRIME BURGER",
-            src: "/logo-prime-burger-780x770.png",
+            src: "/logo-prime-burger-780x770.webp",
             width: 40,
             height: 40,
             alt: "logo",
