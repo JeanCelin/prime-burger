@@ -77,12 +77,12 @@ export default function Order({ burger, drink, back }) {
               </div>
               <div className={styles.btn_container}>
                 <button
-                  className={btnStyles.buttonSecondary}
+                  className={btnStyles.buttonPrimary}
                   onClick={() => back(false)}>
                   back
                 </button>
                 <button
-                  className={btnStyles.buttonSecondary}
+                  className={btnStyles.buttonPrimary}
                   onClick={() => setGetForm(true)}>
                   Next
                 </button>
