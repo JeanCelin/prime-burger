@@ -1,41 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Prime Burger 🍔
 
-## Getting Started
+**Prime Burger** is a responsive website developed for a burger shop, providing an intuitive and fast experience for customers to explore the menu, place delivery orders, and learn more about the brand. The project was created with a focus on efficiency and usability, aiming to offer a dynamic and engaging interface.
 
-First, run the development server:
 
+## 🔗 Demo
+[Link to the site](https://prime-burger.vercel.app/)
+
+## 🚀 Technologies
+
+- **Next.js** - React framework for fast and optimized development
+- **React.js** - Library for building interactive interfaces
+- **HTML5** - Markup language for structuring web content
+- **CSS3** - Styling language for creating visual layouts and designs
+- **CSS Modules** - Modular and organized styling
+- **AOS (Animate on Scroll)** - Scroll animations
+- **Git & GitHub** - Version control and code hosting
+
+## 🎯 Features
+
+### Home Page
+- **Menu Navigation Button**: Takes the user to the menu page, where all burger and drink options are available for order.
+- **Photo Gallery**: Displays a gallery of burgers, which transforms into a carousel on mobile devices for an optimized experience.
+- **Feature Cards**: Highlights three unique characteristics of the burgers in featured cards.
+- **Footer**: Provides additional information and navigation to other pages of the site.
+
+### Menu Page
+- **Price Display and Quantity Selection**: The user can view each item's price and select the desired quantity.
+- **Order Summary**: After selecting at least one burger, the site displays a complete order summary, ready for confirmation.
+- **Order Form**: Collects essential information like name and address, ensuring a personalized delivery experience.
+- **Order Confirmation**: A final message confirms that the order has been successfully placed.
+
+### About Page
+- **Brand Information**: A simple page with details about Prime Burger's history and values.
+
+## 🖥️ Screenshots
+![Screenshot 2024-11-07 123234](https://github.com/user-attachments/assets/49030a93-971d-489f-9ab7-2beab1bdc59b)
+![Screenshot 2024-11-07 123315](https://github.com/user-attachments/assets/6cc58adf-e756-40b6-9130-0f23bed017c3)
+![Screenshot 2024-11-07 123351](https://github.com/user-attachments/assets/f839c2f0-5adb-44c1-9586-77aa62c69619)
+
+
+## 🛠️ Installation and Execution
+
+To run the project locally, follow these steps:
+
+1. Clone this repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/your-username/prime-burger.git
 ```
+2. Access the project directory:
+```bash
+  cd prime-burger
+```
+3. Install dependencies:
+```bash
+  npm install
+```
+4. Run the project:
+```bash
+  npm run dev
+```
+5. Open [http://localhost:3000]( http://localhost:3000) to view the site in action.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📈 Learnings and Challenges
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Developing **Prime Burger** was a valuable experience, where I had the opportunity to:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- **Improve responsive design techniques**, creating an interface that elegantly adapts content for mobile devices.
+- **Implement a dynamic item selection and order summary system**, enhancing my skills in state management and interactivity.
+- **Overcome performance and optimization challenges with Next.js**, ensuring that the site is fast and efficient.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 📄 License
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This project is distributed under the **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)** license.
 
-## Learn More
+- **You can**: Download, study, and share the project as long as you provide proper attribution.
+- **You cannot**: Alter, modify, redistribute, or use the project for commercial purposes, including for courses or other commercial ventures.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# prime-burger
