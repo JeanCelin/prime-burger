@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Image from "next/legacy/image";
 
-import styles from "@/styles/components/layout/Navbar.module.css";
+import styles from "./Navbar.module.css";
 
 export default function NavBar({ itens, logoConfig }) {
   const [navItens, setNavItens] = useState([]);

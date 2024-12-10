@@ -1,7 +1,7 @@
-import styles from "@/styles/components/menu/Form.module.css";
-import btnStyles from "@/styles/components/buttons/Button.module.css";
-import Button from "@/components/buttons/Button";
 import { useState } from "react";
+import styles from "./Form.module.css";
+import btnStyles from "@/components/buttons/Button.module.css";
+import Button from "@/components/buttons/Button";
 
 export default function Form() {
   const [isSuccess, setIsSuccess] = useState(false);

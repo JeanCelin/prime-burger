@@ -1,4 +1,4 @@
-import styles from "@/styles/components/features-card/Card.module.css";
+import styles from "./Card.module.css";
 import { useEffect, useState } from "react";
 
 export default function Card({ content }) {

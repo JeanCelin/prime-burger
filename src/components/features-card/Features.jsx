@@ -1,4 +1,4 @@
-import styles from "@/styles/components/features-card/Features.module.css";
+import styles from "./Features.module.css";
 import Card from "./Card";
 
 export default function FeaturesCard() {

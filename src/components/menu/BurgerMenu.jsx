@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import Image from "next/legacy/image";
-import styles from "@/styles/components/menu/BurgerMenu.module.css";
+import styles from "./BurgerMenu.module.css";
 
 export default function BurgerMenu({ btnOrderActive, handleOrder }) {
   const burgerCard = useMemo(

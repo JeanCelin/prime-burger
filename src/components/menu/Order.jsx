@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import styles from "@/styles/components/menu/Order.module.css";
-import btnStyles from "@/styles/components/buttons/Button.module.css";
+import styles from "./Order.module.css";
+import btnStyles from "@/components/buttons/Button.module.css";
 import Form from "./Form";
 
 export default function Order({ burger, drink, back }) {
