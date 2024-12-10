@@ -57,3 +57,6 @@
 .form__successText {
   font-family: var(--font-secondary);
 }
+.form__errors {
+  color: red;
+}
