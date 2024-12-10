@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import Image from "next/legacy/image";
-import styles from "@/styles/components/menu/DrinkMenu.module.css";
+import styles from "./DrinkMenu.module.css";
 
 export default function DrinkMenu({ btnOrderActive, handleOrder }) {
   const drinkCard = useMemo(

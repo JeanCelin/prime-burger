@@ -1,4 +1,4 @@
-import styles from "@/styles/components/gallery/Gallery.module.css";
+import styles from "./Gallery.module.css";
 import Slider from "@/components/slider/Slider";
 import Image from "next/legacy/image";
 import { useEffect, useState } from "react";

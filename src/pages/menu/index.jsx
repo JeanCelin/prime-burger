@@ -3,7 +3,7 @@ import Head from "next/head";
 import BurgerMenu from "@/components/menu/BurgerMenu";
 import DrinkMenu from "@/components/menu/DrinkMenu";
 import styles from "@/styles/pages/Menu.module.css";
-import btnStyles from "@/styles/components/buttons/Button.module.css";
+import btnStyles from "@/components/buttons/Button.module.css";
 import Order from "@/components/menu/Order";
 
 export default function Menu() {

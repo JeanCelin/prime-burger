@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "@/styles/components/slider/Slider.module.css";
+import styles from "./Slider.module.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
