@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "./DrinkMenu.module.css";
 import {incrementArrayValue} from "@/utils/incrementArrayValue"
 import { decrementArrayValue } from "@/utils/decrementArrayValue";

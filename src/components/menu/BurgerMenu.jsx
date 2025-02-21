@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "./BurgerMenu.module.css";
 import { incrementArrayValue } from "@/utils/incrementArrayValue";
 import { decrementArrayValue } from "@/utils/decrementArrayValue";
@@ -76,7 +76,6 @@ export default function BurgerMenu({
     soma > 0 ? handleBurgerSelected(true) : handleBurgerSelected(false);
   }, [displayValues]);
 
-  console.log(displayValues);
 
   useEffect(() => {
     setDisplayValues(new Array(burgerCard.length).fill(0));

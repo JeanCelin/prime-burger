@@ -31,12 +31,10 @@ export default function Menu() {
     if (e) {
       setIsBtnDisabled(false);
       setIsBurgerSelected(true);
-      console.log(e);
+
     } else {
       setIsBtnDisabled(true);
       setIsBurgerSelected(false);
-      console.log(e);
-      console.log("Nenhum hamburger selecionado");
     }
   };
 
