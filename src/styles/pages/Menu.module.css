@@ -36,6 +36,23 @@
   font-weight: bold;
 }
 
+.menu__btnDisabled {
+  color: var(--theme-tertiary-color);
+  padding: 12px 30px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background-color: #99621f;
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease;
+  margin: 10px;
+  box-shadow: 1px 3px 3px 1px rgb(0 0 0 / 31%);
+  min-width: 48px;
+  min-height: 48px;
+  text-transform: uppercase;
+  cursor: not-allowed;
+}
+
 @media (max-width: 655px) {
   .menu__content {
     background-image: none;

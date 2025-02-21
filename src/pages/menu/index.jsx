@@ -3,7 +3,7 @@ import Head from "next/head";
 import BurgerMenu from "@/components/menu/BurgerMenu";
 import DrinkMenu from "@/components/menu/DrinkMenu";
 import styles from "@/styles/pages/Menu.module.css";
-import btnStyles from "@/styles/components/buttons/Button.module.css";
+import btnStyles from "@/components/buttons/Button.module.css";
 import Order from "@/components/menu/Order";
 
 export default function Menu() {
@@ -12,15 +12,30 @@ export default function Menu() {
   const [getOrderDrinkData, setGetOrderDrinkData] = useState([]);
   const [showOrder, setShowOrder] = useState(false);
   const [errSelected, setErrSelected] = useState(false);
+  const [isBurgerSelected, setIsBurgerSelected] = useState(false);
+  const [isBtnDisabled, setIsBtnDisabled] = useState(true);
 
   const handleClick = () => {
-    setBtnOrderActive(true);
+    if (isBurgerSelected) {
+      setBtnOrderActive(true);
+    }
   };
   const handleBurgerOrder = (data) => {
     setGetOrderBurgerData(data);
   };
   const handleDrinkOrder = (data) => {
     setGetOrderDrinkData(data);
+  };
+
+  const handleBurgerSelected = (e) => {
+    if (e) {
+      setIsBtnDisabled(false);
+      setIsBurgerSelected(true);
+
+    } else {
+      setIsBtnDisabled(true);
+      setIsBurgerSelected(false);
+    }
   };
 
   useEffect(() => {
@@ -59,6 +74,7 @@ export default function Menu() {
             <BurgerMenu
               handleOrder={handleBurgerOrder}
               btnOrderActive={btnOrderActive}
+              handleBurgerSelected={handleBurgerSelected}
             />
             <h2 className={styles.menu__contentTitle}>Drinks</h2>
             <DrinkMenu
@@ -66,7 +82,14 @@ export default function Menu() {
               handleOrder={handleDrinkOrder}
             />
             {errSelected && <p>* Select at least one burger</p>}
-            <button className={btnStyles.buttonPrimary} onClick={handleClick}>
+            <button
+              className={`${
+                isBtnDisabled
+                  ? styles.menu__btnDisabled
+                  : btnStyles.buttonPrimary
+              }`}
+              onClick={handleClick}
+              disabled={isBtnDisabled}>
               ORDER
             </button>
           </div>

@@ -21,7 +21,13 @@ export default function Home() {
             className={styles.home__backgroundImage}
             src="/bg-burger.jpeg"
             alt="Background of burgers"
+            blurDataURL="/bg-burger-blur.jpeg"
+            quality={100}
             fill
+            sizes="100vw"
+            style={{
+              objectFit: 'cover',
+            }}
             priority
           />
         </div>

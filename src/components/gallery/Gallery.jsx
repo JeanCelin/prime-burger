@@ -1,7 +1,7 @@
-import styles from "@/styles/components/gallery/Gallery.module.css";
+import styles from "./Gallery.module.css";
 import Slider from "@/components/slider/Slider";
 import Image from "next/legacy/image";
-import { useEffect, useState } from "react";
+import { lazy, useEffect, useState } from "react";
 
 export default function Gallery() {
   const [screenWidth, setScreenWidth] = useState(0);
@@ -59,10 +59,11 @@ export default function Gallery() {
               <div key={index} className={styles.gallery__photoCard}>
                 <Image
                   src={element.src}
-                  intrinsic="true"
                   width={360}
                   height={360}
                   alt={element.alt}
+                  loading="lazy"
+                  blurDataURL="blur.jpeg"
                 />
                 <label>{element.title}</label>
               </div>
