@@ -1,6 +1,9 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import Image from "next/legacy/image";
 import styles from "./DrinkMenu.module.css";
+import {incrementArrayValue} from "@/utils/incrementArrayValue"
+import { decrementArrayValue } from "@/utils/decrementArrayValue";
+import { saveOrderData } from '@/utils/orderUtils'
 
 export default function DrinkMenu({ btnOrderActive, handleOrder }) {
   const drinkCard = useMemo(
@@ -61,44 +64,23 @@ export default function DrinkMenu({ btnOrderActive, handleOrder }) {
   }, [drinkCard.length]);
 
   const handleIncreaseClick = (index) => {
-    setDisplayValues((prevValues) => {
-      const newValues = [...prevValues];
-      newValues[index] += 1;
-      return newValues;
-    });
+    setDisplayValues((prevValues) => incrementArrayValue(prevValues, index));
   };
 
   const handleDecreaseClick = (index) => {
-    setDisplayValues((prevValues) => {
-      const newValues = [...prevValues];
-      if (newValues[index] > 0) {
-        newValues[index] -= 1;
-      }
-      return newValues;
-    });
+    setDisplayValues((prevValues) => decrementArrayValue(prevValues, index));
   };
 
-  const saveOrderData = useCallback(() => {
-    const arrayOrder = [];
-    displayValues.forEach((e, index) => {
-      if (e > 0) {
-        let obj = {
-          name: drinkCard[index].title,
-          price: drinkCard[index].price,
-          qnt: e,
-        };
-        arrayOrder.push(obj);
-      }
-    });
-    return arrayOrder;
+  const saveOrder = useCallback(() => {
+    return saveOrderData(displayValues, drinkCard);
   }, [displayValues, drinkCard]);
 
   useEffect(() => {
     if (btnOrderActive) {
-      const newOrderData = saveOrderData();
+      const newOrderData = saveOrder();
       handleOrder(newOrderData);
     }
-  }, [btnOrderActive, displayValues, handleOrder, saveOrderData]);
+  }, [btnOrderActive, displayValues, handleOrder, saveOrder]);
 
   return (
     <section>
