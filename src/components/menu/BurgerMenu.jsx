@@ -74,8 +74,7 @@ export default function BurgerMenu({
       0
     );
     soma > 0 ? handleBurgerSelected(true) : handleBurgerSelected(false);
-  }, [displayValues]);
-
+  }, [displayValues, handleBurgerSelected]);
 
   useEffect(() => {
     setDisplayValues(new Array(burgerCard.length).fill(0));

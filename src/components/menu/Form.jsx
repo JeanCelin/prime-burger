@@ -31,7 +31,7 @@ export default function Form() {
           <Button
             address="/"
             label="Continue Exploring"
-            btnStyle="buttonSecondary"></Button>
+            btnStyle="buttonPrimary"></Button>
         </div>
       ) : (
         <>
@@ -144,7 +144,7 @@ export default function Form() {
                 )}
               </div>
               <div className={styles.form__btnContainer}>
-                <button className={btnStyles.buttonSecondary} type="submit">
+                <button className={btnStyles.buttonPrimary} type="submit">
                   Submit
                 </button>
               </div>
