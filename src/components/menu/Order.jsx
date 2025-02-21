@@ -7,6 +7,7 @@ export default function Order({ burger, drink, back }) {
   const [displayOrder, setDisplayOrder] = useState(null);
   const [getForm, setGetForm] = useState(false);
 
+
   useEffect(() => {
     let total = 0;
 

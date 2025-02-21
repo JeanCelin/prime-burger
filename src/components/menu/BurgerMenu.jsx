@@ -1,11 +1,15 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import Image from "next/legacy/image";
 import styles from "./BurgerMenu.module.css";
-import {incrementArrayValue} from "@/utils/incrementArrayValue"
+import { incrementArrayValue } from "@/utils/incrementArrayValue";
 import { decrementArrayValue } from "@/utils/decrementArrayValue";
-import { saveOrderData } from '@/utils/orderUtils'
+import { saveOrderData } from "@/utils/orderUtils";
 
-export default function BurgerMenu({ btnOrderActive, handleOrder }) {
+export default function BurgerMenu({
+  btnOrderActive,
+  handleOrder,
+  btnDisabledChange,
+}) {
   const burgerCard = useMemo(
     () => [
       {
@@ -65,6 +69,16 @@ export default function BurgerMenu({ btnOrderActive, handleOrder }) {
   const [displayValues, setDisplayValues] = useState([]);
 
   useEffect(() => {
+    const soma = displayValues.reduce(
+      (acc, currentValue) => acc + currentValue,
+      0
+    );
+    soma > 0 ? btnDisabledChange(false) : btnDisabledChange(true);
+  }, [displayValues]);
+
+  console.log(displayValues);
+
+  useEffect(() => {
     setDisplayValues(new Array(burgerCard.length).fill(0));
   }, [burgerCard.length]);
 
@@ -72,13 +86,13 @@ export default function BurgerMenu({ btnOrderActive, handleOrder }) {
     setDisplayValues((prevValues) => incrementArrayValue(prevValues, index));
   };
 
-const handleDecreaseClick = (index) => {
-  setDisplayValues((prevValues) => decrementArrayValue(prevValues, index));
-};
+  const handleDecreaseClick = (index) => {
+    setDisplayValues((prevValues) => decrementArrayValue(prevValues, index));
+  };
 
-const saveOrder = useCallback(() => {
-  return saveOrderData(displayValues, burgerCard);
-}, [displayValues, burgerCard]);
+  const saveOrder = useCallback(() => {
+    return saveOrderData(displayValues, burgerCard);
+  }, [displayValues, burgerCard]);
 
   useEffect(() => {
     if (btnOrderActive) {
@@ -108,7 +122,14 @@ const saveOrder = useCallback(() => {
             </div>
           </div>
           <div className={styles.burgerMenu__imageContainer}>
-            <Image src={e.src} width={e.width} height={e.height} alt={e.alt} loading="lazy" blurDataURL="/blur.jpeg" />
+            <Image
+              src={e.src}
+              width={e.width}
+              height={e.height}
+              alt={e.alt}
+              loading="lazy"
+              blurDataURL="/blur.jpeg"
+            />
           </div>
         </div>
       ))}
