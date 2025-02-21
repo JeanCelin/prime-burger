@@ -126,7 +126,7 @@ export default function BurgerMenu({ btnOrderActive, handleOrder }) {
             </div>
           </div>
           <div className={styles.burgerMenu__imageContainer}>
-            <Image src={e.src} width={e.width} height={e.height} alt={e.alt} />
+            <Image src={e.src} width={e.width} height={e.height} alt={e.alt} loading="lazy" blurDataURL="/blur.jpeg" />
           </div>
         </div>
       ))}

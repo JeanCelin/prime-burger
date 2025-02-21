@@ -1,6 +1,10 @@
 import Head from "next/head";
 import styles from "@/styles/pages/About.module.css";
-import Image from "next/legacy/image";
+import Image from "next/image";
+
+import chefImg from "/public/assets/about/chef.jpg";
+import holdingBurger from "/public/assets/about/burger-in-hands.jpg";
+import showingBurger from "/public/assets/about/man-showing-hamburger.jpg";
 
 export default function About() {
   return (
@@ -28,14 +32,16 @@ export default function About() {
             slow, savory meal, each bite is crafted to <span>surprise</span> and{" "}
             <span>delight</span> your palate.
           </p>
-          <div className={styles.about__imageContainer}>
+          <div
+            className={styles.about__imageContainer}>
             <Image
               priority
-              src="/assets/about/chef.jpg"
-              intrinsic="true"
-              width={600}
-              height={480}
+              src={chefImg}
               alt="A photo of the chef holding a cutting board with a burger on it, inside the kitchen."
+              placeholder="blur"
+              fill
+              style={{ objectFit: "contain" }} 
+        
             />
           </div>
         </div>
@@ -51,13 +57,17 @@ export default function About() {
             special celebration. Our mission is to ensure that every bite is a{" "}
             <span>memorable experience</span>!
           </p>
-          <div className={styles.about__imageContainer}>
+          <div
+            className={styles.about__imageContainer}>
             <Image
-              src="/assets/about/burger-in-hands.jpg"
-              intrinsic="true"
-              width={720}
-              height={449}
+              src={holdingBurger}
+              placeholder="blur"
               alt="A photo of a hamburger being held by a person with the hamburger in the center of the image"
+              loading="lazy"
+              fill
+              style={{ objectFit: "contain" }} 
+              
+
             />
           </div>
         </div>
@@ -70,13 +80,16 @@ export default function About() {
             Order now and savor this <span>unique experience</span> without
             leaving your house.
           </p>
-          <div className={styles.about__imageContainer}>
+          <div
+            className={styles.about__imageContainer}>
             <Image
-              intrinsic="true"
-              src="/assets/about/man-showing-hamburger.jpg"
-              width={360}
-              height={480}
+              src={showingBurger}
               alt="A photo of a person showing a bitten hamburger"
+              placeholder="blur"
+              loading="lazy"
+              fill
+              style={{ objectFit: "contain" }} 
+            
             />
           </div>
         </div>

@@ -9,7 +9,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5rem;
+  gap: 2rem;
   border-bottom: 5px solid var(--theme-primary-color);
   text-align: justify;
 }
@@ -61,12 +61,14 @@
   font-weight: bold;
 }
 .about__imageContainer {
+  position: relative;
   display: flex;
-  max-width: 500px;
-  background-color: var(--theme-secondary-color);
-  border: 3px solid var(--theme-primary-color);
-  box-shadow: 1px 2px 6px #0000007d;
+  width: 80vw;
+  max-width: 450px;
+  height: 70vw;
+  max-height: 400px;
 }
+
 
 @media (max-width: 1080px) {
   .about__part1 {

@@ -1,20 +1,26 @@
+import { useEffect, useState } from "react";
 import Link from "next/link";
-
 import styles from "./Footer.module.css";
 
 export default function Footer() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__me}>
         <p className={styles.footer__name}>Jean Celin</p>
         <div className={styles.footer__meContactContainer}>
           <div className={styles.footer__meContact}>
-            <ion-icon name="logo-whatsapp"></ion-icon>
+            {isClient && <ion-icon name="logo-whatsapp"></ion-icon>}
             <p>WhatsApp: +55 (28) 99922-8065</p>
           </div>
           <div className={styles.footer__meContact}>
-            <ion-icon name="mail-outline"></ion-icon>
-            <p> jeancelin.contact@gmail.com</p>
+            {isClient && <ion-icon name="mail-outline"></ion-icon>}
+            <p>jeancelin.contact@gmail.com</p>
           </div>
         </div>
       </div>
@@ -26,9 +32,9 @@ export default function Footer() {
               <Link
                 className={styles.footer__link}
                 target="_blank"
-                href="https://www.instagram.com/jeancelin_/?igsh=MTRvZjc4OXp6dWNyZQ%3D%3D"
+                href="https://www.instagram.com/jeancelin_/"
                 aria-label="Instagram - Jean Celin">
-                <ion-icon name="logo-instagram"></ion-icon>
+                {isClient && <ion-icon name="logo-instagram"></ion-icon>}
               </Link>
             </li>
             <li title="Linkedin">
@@ -37,7 +43,7 @@ export default function Footer() {
                 target="_blank"
                 href="https://www.linkedin.com/in/jean-celin/"
                 aria-label="LinkedIn - Jean Celin">
-                <ion-icon name="logo-linkedin"></ion-icon>
+                {isClient && <ion-icon name="logo-linkedin"></ion-icon>}
               </Link>
             </li>
             <li title="GitHub">
@@ -46,7 +52,7 @@ export default function Footer() {
                 target="_blank"
                 href="https://github.com/JeanCelin"
                 aria-label="GitHub - Jean Celin">
-                <ion-icon name="logo-github"></ion-icon>
+                {isClient && <ion-icon name="logo-github"></ion-icon>}
               </Link>
             </li>
           </ul>
