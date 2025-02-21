@@ -12,10 +12,13 @@ export default function Menu() {
   const [getOrderDrinkData, setGetOrderDrinkData] = useState([]);
   const [showOrder, setShowOrder] = useState(false);
   const [errSelected, setErrSelected] = useState(false);
+  const [isBurgerSelected, setIsBurgerSelected] = useState(false);
   const [isBtnDisabled, setIsBtnDisabled] = useState(true);
 
   const handleClick = () => {
-    setBtnOrderActive(true);
+    if (isBurgerSelected) {
+      setBtnOrderActive(true);
+    }
   };
   const handleBurgerOrder = (data) => {
     setGetOrderBurgerData(data);
@@ -24,9 +27,18 @@ export default function Menu() {
     setGetOrderDrinkData(data);
   };
 
-  const btnDisabledChange = ()=>{
-    setIsBtnDisabled(false)
-  }
+  const handleBurgerSelected = (e) => {
+    if (e) {
+      setIsBtnDisabled(false);
+      setIsBurgerSelected(true);
+      console.log(e);
+    } else {
+      setIsBtnDisabled(true);
+      setIsBurgerSelected(false);
+      console.log(e);
+      console.log("Nenhum hamburger selecionado");
+    }
+  };
 
   useEffect(() => {
     if (getOrderBurgerData.length > 0) {
@@ -64,7 +76,7 @@ export default function Menu() {
             <BurgerMenu
               handleOrder={handleBurgerOrder}
               btnOrderActive={btnOrderActive}
-              btnDisabledChange={btnDisabledChange}
+              handleBurgerSelected={handleBurgerSelected}
             />
             <h2 className={styles.menu__contentTitle}>Drinks</h2>
             <DrinkMenu
@@ -73,7 +85,11 @@ export default function Menu() {
             />
             {errSelected && <p>* Select at least one burger</p>}
             <button
-              className={btnStyles.buttonPrimary}
+              className={`${
+                isBtnDisabled
+                  ? styles.menu__btnDisabled
+                  : btnStyles.buttonPrimary
+              }`}
               onClick={handleClick}
               disabled={isBtnDisabled}>
               ORDER

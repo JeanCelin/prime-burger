@@ -8,7 +8,7 @@ import { saveOrderData } from "@/utils/orderUtils";
 export default function BurgerMenu({
   btnOrderActive,
   handleOrder,
-  btnDisabledChange,
+  handleBurgerSelected,
 }) {
   const burgerCard = useMemo(
     () => [
@@ -73,7 +73,7 @@ export default function BurgerMenu({
       (acc, currentValue) => acc + currentValue,
       0
     );
-    soma > 0 ? btnDisabledChange(false) : btnDisabledChange(true);
+    soma > 0 ? handleBurgerSelected(true) : handleBurgerSelected(false);
   }, [displayValues]);
 
   console.log(displayValues);
