@@ -3,6 +3,7 @@ import Button from "@/components/buttons/Button";
 import Features from "@/components/features-card/Features";
 import Gallery from "@/components/gallery/Gallery";
 import styles from "@/styles/pages/Home.module.css";
+
 import Image from "next/image";
 
 export default function Home() {
@@ -32,7 +33,7 @@ export default function Home() {
           />
         </div>
         <div className={styles.home__content}>
-          <h1 className={styles.home__title}>PRIME BURGER</h1>
+          <h1 className={`${styles.home__title}`}>PRIME BURGER</h1>
           <p className={styles.home__description}>
             Speed that surprises, quality that impresses, and flavor that
             captivates!

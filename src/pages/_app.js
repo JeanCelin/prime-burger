@@ -1,10 +1,11 @@
 import "@/styles/globals/globals.css";
 import NavBar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import {roboto, specialElite} from '@/styles/fonts/fonts'
 
 export default function App({ Component, pageProps }) {
   return (
-    <>
+    <div className={`${roboto.variable} ${specialElite.variable}`}>
       <NavBar
         itens={[
           { label: "Home", address: "/" },
@@ -23,6 +24,6 @@ export default function App({ Component, pageProps }) {
       />
       <Component {...pageProps} />
       <Footer />
-    </>
+    </div>
   );
 }
