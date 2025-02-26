@@ -4,64 +4,17 @@ import styles from "./DrinkMenu.module.css";
 import {incrementArrayValue} from "@/utils/incrementArrayValue"
 import { decrementArrayValue } from "@/utils/decrementArrayValue";
 import { saveOrderData } from '@/utils/orderUtils'
+import {drinksData} from '@/utils/DrinksData'
 
 export default function DrinkMenu({ btnOrderActive, handleOrder }) {
-  const drinkCard = useMemo(
-    () => [
-      {
-        title: "Orange Juice",
-        price: 4.5,
-        src: "/assets/juices/orange-juice/orange-juice-128w.jpeg",
-        width: 128,
-        height: 128,
-        alt: "A picture of an orange juice",
-        description: "Fresh oranges.",
-      },
-      {
-        title: "Pineapple Juice",
-        price: 5.0,
-        src: "/assets/juices/pineapple-juice/pineapple-juice-128w.jpeg",
-        width: 128,
-        height: 128,
-        alt: "A picture of an pineapple juice",
-        description: "Ripe pineapple.",
-      },
-      {
-        title: "Green Juice",
-        price: 6.0,
-        src: "/assets/juices/green-juice/green-juice-128w.jpeg",
-        width: 128,
-        height: 128,
-        alt: "A photo of a green juice made with kale, apple and lemon",
-        description: "Kale, apple, lemon, water.",
-      },
-      {
-        title: "Mango Juice",
-        price: 4.5,
-        src: "/assets/juices/sleeve-juice/sleeve-juice-128w.jpeg",
-        width: 128,
-        height: 128,
-        alt: "A picture of an mango juice",
-        description: "Ripe mango, water, sugar.",
-      },
-      {
-        title: "Watermelon Juice",
-        price: 4.0,
-        src: "/assets/juices/watermelon-juice/watermelon-juice-128w.jpeg",
-        width: 128,
-        height: 128,
-        alt: "A picture of an watermelon juice",
-        description: "Watermelon, lemon.",
-      },
-    ],
-    []
-  );
+
+  const drinks = drinksData;
 
   const [displayValues, setDisplayValues] = useState([]);
 
   useEffect(() => {
-    setDisplayValues(new Array(drinkCard.length).fill(0));
-  }, [drinkCard.length]);
+    setDisplayValues(new Array(drinks.length).fill(0));
+  }, [drinks.length]);
 
   const handleIncreaseClick = (index) => {
     setDisplayValues((prevValues) => incrementArrayValue(prevValues, index));
@@ -72,8 +25,8 @@ export default function DrinkMenu({ btnOrderActive, handleOrder }) {
   };
 
   const saveOrder = useCallback(() => {
-    return saveOrderData(displayValues, drinkCard);
-  }, [displayValues, drinkCard]);
+    return saveOrderData(displayValues, drinks);
+  }, [displayValues, drinks]);
 
   useEffect(() => {
     if (btnOrderActive) {
@@ -84,7 +37,7 @@ export default function DrinkMenu({ btnOrderActive, handleOrder }) {
 
   return (
     <section>
-      {drinkCard.map((e, index) => (
+      {drinks.map((e, index) => (
         <div key={index} className={styles.drinkMenu}>
           <div className={styles.drinkMenu__card}>
             <div className={styles.drinkMenu__cardContainer}>

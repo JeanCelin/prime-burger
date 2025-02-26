@@ -4,67 +4,14 @@ import styles from "./BurgerMenu.module.css";
 import { incrementArrayValue } from "@/utils/incrementArrayValue";
 import { decrementArrayValue } from "@/utils/decrementArrayValue";
 import { saveOrderData } from "@/utils/orderUtils";
+import { burgersData } from "@/utils/BurgerData";
 
 export default function BurgerMenu({
   btnOrderActive,
   handleOrder,
   handleBurgerSelected,
 }) {
-  const burgerCard = useMemo(
-    () => [
-      {
-        title: "Classic Cheeseburger",
-        price: 23.27,
-        src: "/assets/burgers/cheese-burger/cheese-burger-128w.jpeg",
-        width: 128,
-        height: 128,
-        alt: "A picture of a cheeseburger",
-        description:
-          "bun, beef patty, cheddar cheese, lettuce, tomato, special sauce.",
-      },
-      {
-        title: "Bacon BBQ",
-        price: 25.98,
-        src: "/assets/burgers/bacon-bbq/bacon-bbq-128w.jpeg",
-        width: 128,
-        height: 128,
-        alt: "A picture of a bacon burger",
-        description:
-          "brioche bun, beef patty, bacon, cheddar cheese, caramelized onions, barbecue sauce.",
-      },
-      {
-        title: "Veggie Delight",
-        price: 32.6,
-        src: "/assets/burgers/veggie-delight/veggie-delight-128w.jpeg",
-        width: 128,
-        height: 128,
-        alt: "A picture of a vegan burger",
-        description:
-          "whole wheat bun, chickpea patty, avocado, lettuce, tomato, yogurt sauce.",
-      },
-      {
-        title: "Chicken Crispy",
-        price: 24.32,
-        src: "/assets/burgers/chicken-crispy/chicken-crispy-128w.png",
-        width: 128,
-        height: 128,
-        alt: "A picture of a chicken burger",
-        description:
-          "bun, breaded chicken fillet, lettuce, tomato, mayonnaise, pickles.",
-      },
-      {
-        title: "Lamb Burger",
-        price: 28.99,
-        src: "/assets/burgers/lamb-burger/lamb-burger-128w.jpeg",
-        width: 128,
-        height: 128,
-        alt: "A picture of a lamb burger",
-        description:
-          "pita bread, lamb patty, feta cheese, tzatziki sauce, lettuce, tomato.",
-      },
-    ],
-    []
-  );
+  const burgers = burgersData;
 
   const [displayValues, setDisplayValues] = useState([]);
 
@@ -77,8 +24,8 @@ export default function BurgerMenu({
   }, [displayValues, handleBurgerSelected]);
 
   useEffect(() => {
-    setDisplayValues(new Array(burgerCard.length).fill(0));
-  }, [burgerCard.length]);
+    setDisplayValues(new Array(burgers.length).fill(0));
+  }, [burgers.length]);
 
   const handleIncreaseClick = (index) => {
     setDisplayValues((prevValues) => incrementArrayValue(prevValues, index));
@@ -89,8 +36,8 @@ export default function BurgerMenu({
   };
 
   const saveOrder = useCallback(() => {
-    return saveOrderData(displayValues, burgerCard);
-  }, [displayValues, burgerCard]);
+    return saveOrderData(displayValues, burgers);
+  }, [displayValues, burgers]);
 
   useEffect(() => {
     if (btnOrderActive) {
@@ -101,7 +48,7 @@ export default function BurgerMenu({
 
   return (
     <section>
-      {burgerCard.map((e, index) => (
+      {burgers.map((e, index) => (
         <div key={index} className={styles.burgerMenu}>
           <div className={styles.burgerMenu__card}>
             <div className={styles.burgerMenu__cardContainer}>
